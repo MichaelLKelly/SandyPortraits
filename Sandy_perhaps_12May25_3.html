@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>11May25 Portraits of Sandy</title>
+
+    <link rel="stylesheet" href="sandyStyle.css">
+
+    <script type="text/javascript" src="https://d3js.org/d3.v6.js"></script>
+    <script type="text/javascript" src="https://d3js.org/topojson.v1.min.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- adding jquery, just in case -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js"></script> -->
+
+
+
+
+
+</head>
+
+<body>
+    <!-- <div class="testCard">
+        <div class="testInnerCard">
+            <div class="testSky">
+                <div class="popCol"></div>
+                <div class="popCol"></div>
+                <div class="popCol"></div>
+            </div>
+        </div>
+    </div>
+    </div> -->
+
+    <!-- HERE'S THE WATER BACKGROUND -->
+
+    <div id="sandyIntro">
+        <div id="waterBG">
+            <!-- <div>
+                <img src="100yr_port_water_IMG_2571.png">
+            </div> -->
+            <div id="sandyTitle">
+                <div class="sandySub">
+                    ALTERNATE RENDERINGS<br>OF CLIMATE CHANGE
+                </div>
+
+                <div id="sTitleOne">
+                    Portraits
+                </div>
+                <hr class="sandyTRule">
+                <div id="sTitleTwo">
+                    of Sandy
+                </div>
+
+                <img class="sandyIcon" src="SandyHurricaneIcon.svg">
+
+                <div class="sandySub">
+                    VISUALIZATION BY<br>MICHAEL L KELLY
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="introText">
+        <p><span class="introLead">Everything changed.</span> Surging waves overtook seawalls and flooded LaGuardia
+            Airport. Subways turned to rivers.
+            Hospitals were evacuated. Lives were lost. Across the Hudson, in New Jersey, beaches and homes were
+            destroyed and businesses upended. Days earlier, Jamaica, Cuba, Haiti, the Dominican Republic, and the
+            Bahamas all suffered damage and loss from yet another storm that upended our reality. </p>
+        <p>On the evening of October 29, 2012, Superstorm Sandy hit the five boroughs of New York City with a storm
+            surge that led to flooding of an unprecedented degree. Extreme weather events are often spoken of in
+            reference to x-year events, so that the 100-year floodplain represents the extent of land that stands a 1%
+            or 1-in-100 chance of flooding in a given year. According to the PlaNYC report, A Stronger, More Resilient
+            New York, which informs much of this text, the flooding from Sandy’s wave impact exceeded that floodplain by
+            an additional 53%. It was a 260-year storm. </p>
+        <p>But weather and floodplain maps, viewed from hundreds of miles up and already abstract for many, cannot
+            express the effect on human lives, no matter how harsh their colors or expansive their scale. Far more
+            telling are the photos, documentation of destruction — the sky reflected where streets should be, the world
+            turned upside down.</p>
+        <p>The aftermath witnessed in Sandy’s floodprint is not just in the past, but increasingly part of our present
+            and future, as rising sea levels from climate change amplify surges from storms fueled by warmer oceans. To
+            represent the effect on communities, can we find ways to expand beyond standard maps to tell more human
+            stories with data? Can we make more compelling data portraits of the world we live in? </p>
+        <p>The visualization on these pages is an exploration of those questions, with the five boroughs — and their
+            residents — as the subject.
+    </div>
+
+    <hr class="sandyRule">
+
+    <div id="fullSandyMap">
+
+    </div>
+
+    <hr class="sandyRule">
+
+    <div id="sandyKey">
+        <img src="Bronx_Key_Graphic_FPO.png" style="height: 400px">
+
+
+        This is where the key will go…
+
+        Each silhouette = 2,500 residents, per
+        2020 Census data. All NTA population totals were rounded up, so that those with fewer than 2,500 residents are
+        represented by one individual. Note: The code generating the silhouettes selects a new set on reload, to better
+        reflect the diverse populations and suggest over time as many different residents as possible. Therefore, the
+        specific silhouettes seen in the thumbnail and magnified versions of the same NTA may not correspond, though the
+        number of them does.
+    </div>
+
+
+
+    <div class="runningText" id="bronxText">
+
+        <p>Using silhouettes and not numbers, each card is a portrait of the community just after Sandy and
+            (subsequently) today. Both the Borough Cards and Neighborhood Cards divide land into two fields,
+            representing percentages above and below water at the height of Sandy’s
+            flooding (approx. 10:30pm). They reconceive these areas as flooded elevations, with each neighborhood’s
+            residents reflected in the risen water.</p>
+        <p>Borough boundaries have stayed roughly the same since the consolidation of the City in 1898, but those of
+            neighborhoods are often debated. They are represented here using the 2020 Neighborhood Tabulation Areas
+            (NTAs) — which suggest a more relatable area for residents than, for example, census tracts — and use the
+            decennial US Census data from that year for population. Here the NTAs have been reordered from government
+            designations to better reflect proximity to their neighbors.</p>
+
+    </div>
+
+    <div class="allNTAs">ALL BRONX NTAs</div>
+
+    <div class="linOCardHolder">
+        <div class="linOCards" id="bronx" style="z-index: 300">
+        </div>
+    </div>
+
+    <div class="boroHolder">
+        <div class="boroMap" id="bronxMap">
+            The Bronx<sup>1,2</sup>
+            Population: 1,472,654<sup>3</sup>
+            Total Sq MI: 42.2
+        </div>
+
+        <div class="singCard" id="singBronxCard">
+        </div>
+    </div>
+
+    <div class="runningText" id="bklynText">
+        <p>As becomes evident, boroughs and neighborhoods were not flooded equally by Sandy, but these cards are only
+            part of the story of flooding related to climate change.</p>
+        <p>While Sandy’s storm surge flooded 88% of coastal Brighton Beach [in Brooklyn] (BK1303), farther inland
+            neighborhoods like
+            Prospect Heights (BK0801, an entirely dry card) have experienced overwhelming flooding more recently from
+            less intense, unnamed storms. Rainwater cascaded down subway steps and walls, and residents forded streets
+            in knee-deep water. Those in basement apartments — often the homes of lower-income residents — were also
+            often hit hardest.</p>
+        <p>In a truly collective portrait of climate change that contained all effects, both the Borough and
+            Neighborhood Cards seen here would have substantially more land under water.</p>
+    </div>
+
+    <div class="allNTAs">ALL BROOKLYN NTAs</div>
+
+    <div class="linOCardHolder">
+        <div class="linOCards" id="bklyn" style="z-index: 300">
+        </div>
+    </div>
+
+    <div class="boroHolder">
+
+        <div class="boroMap" id="bklynMap">
+            <div class="boroTitle" id="bklynTitle">
+                Brooklyn<sup>1</sup><br>
+                Population: 2,736,074<sup>2</sup><br>
+                Total Sq MI: 69.4
+            </div>
+        </div>
+
+        <div class="singCard" id="singBklynCard">
+        </div>
+    </div>
+
+    <div class="notes" id="bklynNotes">
+        1. Also known as Kings County, the borough of Brooklyn contains parts of Jamaica Bay Wildlife Refuge in its
+        southeast (BK5692). A number of these islands appear under water post-Sandy on a map produced by FEMA, but this
+        is not represented in NYC Open Data. The card for that NTA should then presumably be more full of water. While
+        the card shows no human population, the refuge’s name suggests how nonhuman animal populations are also severely
+        affected by climate change–related events like Sandy.<br>
+        2. US Census, 2020.
+    </div>
+
+
+    <div class="boroHolder">
+        <div class="boroMap" id="manhMap">
+            <div class="boroTitle" id="manhTitle">
+                <h3>Manhattan</h3><sup>1,2</sup><br>
+                Population: 1,694,251<sup>3</sup><br>
+                Total Sq MI: 22.7
+            </div>
+        </div>
+
+        <div class="singCard" id="singManhCard">
+        </div>
+    </div>
+
+    <div class="allNTAs">ALL MANHATTAN NTAs</div>
+
+    <div class="linOCardHolder">
+        <div class="linOCards" id="manh" style="z-index: 300">
+        </div>
+    </div>
+
+    <div class="runningText" id="manhText">
+
+        <p>The stark differences in flood levels — seen most noticeably in those so flooded that they displace the label
+            text — also belie wider-ranging impacts on infrastructure and livelihoods. Drier land did not necessarily
+            protect residents from blackouts — and lost business — caused by power outages in Southern Manhattan and
+            elsewhere. We are connected by more than shorelines and subway fares.</p>
+        <p>New York’s 520 miles of coastline are home to residents of all incomes, with luxury apartments and public
+            housing situated along them. Over 400 New York City Housing Authority buildings (intended to provide
+            affordable housing for low- and moderate-income New Yorkers) lost power, heat, or hot water during Sandy,
+            affecting approximately 35,000 housing units, according to the PlaNYC report. Subsequent planning aside,
+            these residents found themselves with fewer resources for resilience.</p>
+
+    </div>
+
+
+    <div class="boroHolder">
+        <div class="boroMap" id="queensMap">
+            Queens<sup>1</sup><br>
+            Population: 2,405,464<sup>2</sup><br>
+            Total Sq MI: 108.7
+        </div>
+
+        <div class="singCard" id="singQueensCard">
+            <!-- selected card to appear here -->
+
+        </div>
+    </div>
+
+    <div class="allNTAs">ALL QUEENS NTAs</div>
+
+
+    <div class="linOCardHolder">
+        <div class="linOCards" id="queens" style="z-index: 300">
+        </div>
+    </div>
+
+    <div class="runningText" id="queensText">
+
+        <p>When the waters receded, new landscapes emerged. Beaches on Queens’ Rockaway Peninsula, one of the hardest
+            hit areas in the city, lost 1.5 million cubic yards of sand — half the total lost in the City and the
+            equivalent of over 100,000 dump trucks — and over a mile of boardwalk was destroyed, per PlaNYC. Some
+            residents in the Rockaways were without telecommunications services for days and without power for weeks.
+            Some transit service to the peninsula was not restored until half a year later, and the system and community
+            are still impacted today.</p>
+
+    </div>
+
+
+
+    <div class="boroHolder">
+        <div class="boroMap" id="statenMap">
+            Staten Island<sup>1</sup><br>
+            Population: 495,747<sup>2</sup><br>
+            Total Sq MI: 57.5
+        </div>
+
+        <div class="singCard" id="singStatenCard">
+            <!-- selected card to appear here -->
+
+        </div>
+    </div>
+
+    <div class="allNTAs">ALL STATEN ISLAND NTAs</div>
+
+    <div class="linOCardHolder">
+        <div class="linOCards" id="staten" style="z-index: 300">
+        </div>
+    </div>
+
+    <div class="runningText" id="statenText">
+
+        <p>Of the 43 deaths in New York City connected to Sandy, more than half of them occurred in Staten Island, the
+            front line that Sandy smashed against after hitting New Jersey. While Staten Island is the only one with the
+            title, it is worth noting that four of the boroughs are islands, or parts of a larger one, and are linked
+            through water. The overlapping cards seen here suggest neighboring NTAs, some of which share a coastline,
+            but one could just as readily place Fort Wadsworth in Staten Island next to Bay Ridge in Brooklyn, which
+            sits a mile away via the Verrazano-Narrows Bridge. Such is the connectivity of a port city.</p>
+        <p>We stand on the same ground and look out to and down at the same oceans. The US’s Intracoastal Waterway runs
+            from Boston, past New York, down to Florida and around to its Gulf Coast, which Hurricane Ian flooded with a
+            storm surge in 2022, then on to Texas, where Harvey dropped 60 inches of rain in 2017. At a similar
+            latitude, halfway around the globe, the northeastern Indian state of Meghalaya received record rains in
+            2022. Situated 150 miles inland on the Brahmaputra, still it floods from increased storm intensity.</p>
+        <p>This connectivity, like all this loss, is only suggestible — ultimately unrepresentable in easy-to-digest
+            form. With inaction and lack of preparedness in the face of overwhelming evidence, how can we conceive and
+            therefore mitigate the next superstorm’s impact? Sandy was almost 13 years ago, but some current models show
+            the 9 ft. rise in sea level seen at the Battery in lower Manhattan — and the entire Sandy floodprint — as
+            the new norm by 2200. Still, that 100-year floodplain is all regulation accounts for. If we don’t keep
+            reflecting, if we don’t keep looking at the effects of climate change in new ways, how can others possibly
+            relate? How can we ever adapt? </p>
+
+    </div>
+
+
+</body>
+
+<script>
+
+
+    // FUNCTION onclick
+
+    // THIS IS TRYING TO CREATE A FUNCTION OT BE CALLED LATER FOR THE MAPS 
+    // WILL NEED TO SOMEHOW REFERENCE EACH NTAS OWN NAME AND USE THAT TO CALL DATA FROM DSV... 
+
+
+   
+
+
+    // DRAWING SANDY FULL MAP
+
+    // Some constants I will need later
+
+    const width = 600;
+    const height = 600;
+
+    const bmWidth = 300;
+    const bmHeight = 400;
+
+    const singBronx = d3.select("#singBronxCard");
+    const singBklyn = d3.select("#singBklynCard");
+    const singManh = d3.select("#singManhCard");
+    const singQueens = d3.select("#singQueensCard");
+    const singStaten = d3.select("#singStatenCard");
+
+    const mapBronx = d3.select("#bronxMap").append('svg').attr('width', bmWidth).attr('height', bmHeight).attr('class', 'svgNeighbor');
+    const mapBklyn = d3.select("#bklynMap").append('svg').attr('width', bmWidth).attr('height', bmHeight).attr('class', 'svgNeighbor');
+    const mapManh = d3.select("#manhMap").append('svg').attr('width', bmWidth).attr('height', bmHeight).attr('class', 'svgNeighbor');
+    const mapQueens = d3.select("#queensMap").append('svg').attr('width', bmWidth).attr('height', bmHeight).attr('class', 'svgNeighbor');
+    const mapStaten = d3.select("#statenMap").append('svg').attr('width', bmWidth).attr('height', bmHeight).attr('class', 'svgNeighbor');
+
+    const svg = d3.select('#fullSandyMap').append('svg').attr('width', width).attr('height', height).attr('class', 'svgNeighbor');
+    //   const svg2 = d3.select('#fullSandyMap').append('svg').attr('width', width).attr('height', height).attr('class', 'svgFlood');
+
+    // const projection = d3.geoMercator().scale(10).translate([width / 2, height / 1.4]);
+
+    // const projection = d3.geoTransverseMercator()
+    // .scale(1600);
+
+    var projection = d3.geoMercator()
+        .center([-73.94, 40.70])
+        .scale(50000)
+        // 50000 works well for large map
+        .translate([((width) / 2), (height) / 2]);
+    // .translate([0, 0]);
+
+    var bronxProj = d3.geoMercator()
+        .center([-73.85, 40.85])
+        .scale(65000)
+        // 50000 works well for large map
+        .translate([((bmWidth) / 2), (bmHeight) / 2]);
+    // 40.853448381389825, -73.85364084439297
+
+    var bklynProj = d3.geoMercator()
+        .center([-73.95, 40.65])
+        .scale(65000)
+        // 50000 works well for large map
+        .translate([((bmWidth) / 2), (bmHeight) / 2]);
+    // .translate([0, 0]);
+
+    var manhProj = d3.geoMercator()
+        .center([-73.96, 40.79])
+        .scale(65000)
+        // 50000 works well for large map
+        .translate([((bmWidth) / 2), (bmHeight) / 2]);
+    // .translate([0, 0]);
+
+    var queensProj = d3.geoMercator()
+        .center([-73.83, 40.67])
+        .scale(65000)
+        // 50000 works well for large map
+        .translate([((bmWidth) / 2), (bmHeight) / 2]);
+    // .translate([0, 0]);
+    // 40.67437663855627, -73.82348067996148
+
+    var statenProj = d3.geoMercator()
+        .center([-74.16, 40.57])
+        .scale(65000)
+        // 50000 works well for large map
+        .translate([((bmWidth) / 2), (bmHeight) / 2]);
+    // 40.573863824200416, -74.16140972498967
+
+    const path = d3.geoPath(projection);
+    const bronxPath = d3.geoPath(bronxProj);
+    const bklynPath = d3.geoPath(bklynProj);
+    const manhPath = d3.geoPath(manhProj);
+    const queensPath = d3.geoPath(queensProj);
+    const statenPath = d3.geoPath(statenProj);
+
+    // using topoJSON - being convert
+
+    const g = svg.append('g');
+    const h = svg.append('g');
+    const j = svg.append('g');
+
+    // might want to make different boroughs separate files, so each is under 100MB
+
+    d3.json("Sandy_from_QGIS_06May_CRS84.geojson")
+        // d3.json("100year_test_06May25_CRS84.geojson")
+        // d3.json("100_year_from_QGIS.geojson")
+        .then(data => {
+            console.log(data)
+            h.selectAll('path').data(data.features).enter().append('path').attr('class', 'flood').attr('d', path)
+                ;
+        });
+
+    // d3.json("2010_Neighborhood_Tabulation_Areas_NTAs.json")
+    // d3.json("2020_NTAs_06May25_3Newline.json")
+    // d3.json("2020_NTAs_06May25.geojson")
+    d3.json("2020_NTAs_06May25_6_CRS84.geojson")
+        // d3.json("2020_NTAs_06May25_4.geojsonl")
+        .then(data => {
+            // countries.features is specific to this topojson set -would need to explore
+            console.log(data);
+            // const tracts = (data, data.features);
+            g.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighbor').attr('id', d => d.properties.nta2020).attr('d', path)
+                .style('fill', '#9bcbe2')
+                ;
+            j.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighborOut').attr('id', d => d.properties.ntacode).attr('d', path)
+
+                //  CLICK HERE IS JUST TO TEST FUNCTIONALITY FOR WHEN BOROUGHS ARE ALONE - AN BE DELETED LATER
+                .on("click", function (event, d) {
+                    //    console.log("clicked" + (d.NTANum)) 
+                    singBklyn.html(d.properties.ntaname)
+
+                });
+            ;
+
+        });
+
+    const bxg = mapBronx.append('g');
+    const bxh = mapBronx.append('g');
+    const bxj = mapBronx.append('g');
+
+    d3.json("Bronx_Sandy.geojson")
+        .then(data => {
+            console.log(data)
+            bxh.selectAll('path').data(data.features).enter().append('path').attr('class', 'flood').attr('d', bronxPath)
+                ;
+        });
+
+    d3.json("Bronx_NTAs.geojson")
+        .then(data => {
+            console.log(data);
+            bxg.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighbor').attr('id', d => d.properties.nta2020).attr('d', bronxPath)
+                .style('fill', '#9bcbe2')
+                ;
+            bxj.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighborOut').attr('id', d => d.properties.ntacode).attr('d', bronxPath)
+                //  CLICK HERE IS JUST TO TEST FUNCTIONALITY FOR WHEN BOROUGHS ARE ALONE - AN BE DELETED LATER
+                .on("click", function (event, d) {
+                    //    console.log("clicked" + (d.NTANum)) 
+                    singBronx.html(d.properties.ntaname);
+                    d3.selectAll(".neighborOut")
+                        .style("fill-opacity", 0)
+                    d3.select(this)
+                        .style("fill-opacity", 0.3);
+                    var selectedNTA = (d.properties.nta2020);
+                    console.log(selectedNTA);
+                    // NOW USE THIS TO FIND THAT NTA IN CSV - THAT'S THE TRICK
+                    // AND THEN HAVE IT PERFORM FUNCTION OF BUILDING CARDS
+                    // console.log("NTANum is " + d.NTANum);
+
+                    d3.csv("Sandy_NTA_16Apr25_BronxReorder.csv").then(function (data) {
+                        console.log(data);
+                        const selectedRow = data.find(d => d.NTANum === selectedNTA);
+                        console.log(selectedRow);
+                        console.log("NTANum is " + selectedRow.NTANum);
+                    });
+                });
+            ;
+        });
+
+    const bkg = mapBklyn.append('g');
+    const bkh = mapBklyn.append('g');
+    const bkj = mapBklyn.append('g');
+
+
+    
+
+    d3.json("Brooklyn_Sandy.geojson")
+        .then(data => {
+            console.log(data)
+            bkh.selectAll('path').data(data.features).enter().append('path').attr('class', 'flood').attr('d', bklynPath)
+                ;
+        });
+
+    d3.json("Brooklyn_NTAs.geojson")
+        .then(data => {
+            console.log(data);
+            bkg.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighbor').attr('id', d => d.properties.nta2020).attr('d', bklynPath)
+                .style('fill', '#9bcbe2')
+                ;
+            bkj.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighborOut').attr('id', d => d.properties.nta2020 + "out").attr('d', bklynPath)
+            
+                //  CLICK HERE IS JUST TO TEST FUNCTIONALITY FOR WHEN BOROUGHS ARE ALONE - AN BE DELETED LATER
+                // .on("click", selectNTA(d => d.properties.nta2020, "red"))
+
+// var tooltip2 = d3.selectAll('path')
+//   .append("div")
+//   .attr('id', "tip" + d.properties.nta2020)
+//     .style("position", "absolute")
+//     .style("visibility", "hidden")
+//     .style("background-color", "white")
+//     .style("border", "solid")
+//     .style("border-width", "1px")
+//     .style("border-radius", "5px")
+//     .style("padding", "10px")
+//     .html("<p>I'm a tooltip written in HTML</p><img src='https://github.com/holtzy/D3-graph-gallery/blob/master/img/section/ArcSmal.png?raw=true'></img><br>Fancy<br><span style='font-size: 40px;'>Isn't it?</span>");
+
+
+
+
+
+// d3.select(this)
+                .on("mouseover", function (event, d) {
+
+
+// var tooltip2 = d3.select(this)
+//   .append("div")
+//     .style("position", "absolute")
+//     .style("visibility", "hidden")
+//     .style("background-color", "white")
+//     .style("border", "solid")
+//     .style("border-width", "1px")
+//     .style("border-radius", "5px")
+//     .style("padding", "10px")
+//     .html("<p>I'm a tooltip written in HTML</p><img src='https://github.com/holtzy/D3-graph-gallery/blob/master/img/section/ArcSmal.png?raw=true'></img><br>Fancy<br><span style='font-size: 40px;'>Isn't it?</span>");
+
+
+
+                    d3.selectAll(".neighborOut")
+                        .style("stroke", "#58585b")
+                        .style("stroke-width", ".5px");
+                    d3.select(this)
+                        .style("stroke", "rgb(110, 33, 0)")
+                        .style("stroke-width", "1px");
+
+// tooltip2.style("visibility", "visible");
+
+                        
+                })
+                .on("mouseout", function (event, d) {
+                    d3.selectAll(".neighborOut")
+                        .style("stroke", "#58585b")
+                        .style("stroke-width", ".5px");
+                    // d3.select(this)
+                    //     .style("stroke", "rgb(110, 33, 0)")
+                    //     .style("stroke-width", "1px");
+                })
+                .on("click", function (event, d) {
+                    d3.selectAll(".neighborOut")
+                        .style("fill-opacity", 0)
+                    d3.select(this)
+                        .style("fill-opacity", 0.3);
+                    var selectedNTA = (d.properties.nta2020);
+                    console.log(selectedNTA);
+
+
+                    d3.csv("Sandy_NTA_11Apr25_BklynReorder.csv").then(function (data) {
+                        console.log(data);
+                        const NTARow = data.find(d => d.NTANum === selectedNTA);
+                        console.log(NTARow);
+                        console.log("NTANum is " + NTARow.NTANum);
+                        // });
+
+
+
+
+                        // NOW USE THIS TO FIND THAT NTA IN CSV - THAT'S THE TRICK
+                        // AND THEN HAVE IT PERFORM FUNCTION OF BUILDING CARDS
+                        // console.log("NTANum is " + d.NTANum);
+
+                        singBklyn.selectAll("*").remove();
+
+                        // d3.selectAll("#singBklynCard")
+
+                        // singBklyn.append("div").text(d.NTANum);
+                        singBklyn.append("div")
+                            .attr("class", "soloCard")
+                            .attr("id", NTARow.NTANum + "soloCard")
+                            .style("width", soloCardW + "px")
+                            .style("height", soloCardH + "px")
+                            .style("top", "0px");
+                        // .text(d.NTANum);
+
+                        var largeEach = d3.select("#" + NTARow.NTANum + "soloCard")
+
+                        largeEach.append("div")
+                            .style("width", soloCardW + "px")
+                            .style("height", soloCardH + "px")
+                            .style("padding", (soloCardH * .025) + "px")
+                            .attr("id", NTARow.NTANum + "soloInner")
+                            .attr("class", "soloInnerCard");
+
+                        var largeInner = d3.select("#" + NTARow.NTANum + "soloInner")
+
+                        largeInner.append("div")
+                            .attr("class", "soloSky")
+                            .attr("id", NTARow.NTANum + "soloSky")
+                            .style("width", soloCardW - (soloCardH * .05) + "px")
+                            .style("height", (function (data) {
+                                var skyP = .01 * parseInt(NTARow.PctSky)
+                                var skyH = (soloCardH - (soloCardH * .05)) * skyP;
+                                skyHPx = skyH + "px"
+                                return skyHPx
+                            })
+                            );
+
+
+                        var largeSky = d3.select("#" + NTARow.NTANum + "soloSky")
+
+                        largeSky.append("div")
+                            .attr("class", "soloHoldSky")
+                            .attr("id", NTARow.NTANum + "soloHoldSky");
+
+
+                        var largeHoldSky = d3.select("#" + NTARow.NTANum + "soloHoldSky");
+
+                        // largeHoldSky.each(function (data) {
+                        //     var holdSky = d3.select(this)
+                        // CAN SET IT TO CALL THIS FUNCTION REPEATEDLY - MORE EFFICIENT - BUT FINE FOR NOW
+                        largeHoldSky.each(function (data) {
+                            let populated = NTARow.Population2020.replace(/,/g, "");
+                            var numberOfDivs = (Math.ceil(populated / 2500))
+
+                            for (let i = 0; i < numberOfDivs; i++) {
+                                // console.log("these are " + numberOfDivs)
+                                largeHoldSky.append("div")
+                                    .attr("class", "soloPopCol")
+                                    .each(function (d) {
+                                        var eachPopCol = d3.select(this)
+
+                                        eachPopCol.append("img")
+                                            .attr("class", "soloSkyFig")
+                                            // .attr("src", "AftTestFig.svg")  // can also add svg file here
+                                            .attr("src", (function (d) {
+                                                const myArray = ["SandyFigure1.png", "SandyFigure2.png", "SandyFigure3.png", "SandyFigure4.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure7.png", "SandyFigure8.png", "SandyFigure9.png", "SandyFigure10.png", "SandyFigure11.png", "SandyFigure12.png", "SandyFigure13.png", "SandyFigure14.png", "SandyFigure15.png"];
+                                                const myArrayAlt = ["SandyFigure2.png", "SandyFigure3.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure9.png"];
+
+                                                if (numberOfDivs == 1) {
+
+                                                    for (let i = 0; i < numberOfDivs; i++) {
+                                                        const randomIndex = Math.floor(Math.random() * myArrayAlt.length);
+                                                        const randomElement = myArrayAlt[randomIndex];
+                                                        const elementPath = ("SandyFigures/" + randomElement)
+                                                        return elementPath
+                                                    }
+                                                } else {
+                                                    for (let i = 0; i < numberOfDivs; i++) {
+                                                        const randomIndex = Math.floor(Math.random() * myArray.length);
+                                                        const randomElement = myArray[randomIndex];
+                                                        const elementPath = ("SandyFigures/" + randomElement)
+                                                        return elementPath
+                                                    }
+                                                }
+                                            }))
+                                            ;
+                                    })
+                                    ;
+                            }
+                        })
+                        // });
+
+
+
+                        var largeInner = d3.select("#" + NTARow.NTANum + "soloInner")
+
+
+                        largeInner.append("div")
+                            .attr("class", "soloWater")
+                            .attr("id", NTARow.NTANum + "soloWater")
+                            .style("position", "absolute")
+                            // .style("top", (NTARow.PctSky) + 2 + "%")
+                            .style("width", soloCardW - (soloCardH * .05) + "px")
+                            .style("height", (function (data) {
+                                var watP = .01 * parseInt(NTARow.PctWater)
+                                var watH = (soloCardH - (soloCardH * .05)) * watP;
+                                watHPx = watH + "px"
+                                console.log("water height is " + watHPx)
+                                return watHPx
+                            })
+                            )
+                            .each(function (data) {
+                                var eachWat = d3.select(this)
+                                if (NTARow.PctWater >= 2) {
+
+                                    // CAN SET IT TO CALL THIS FUNCTION REPEATEDLY - MORE EFFICIENT - BUT FINE FOR NOW
+                                    eachWat.each(function (data) {
+                                        const el = document.querySelector("#" + NTARow.NTANum + "soloWater");
+                                        var originalElement = document.getElementById(NTARow.NTANum + "soloSky");
+                                        var clonedElement = originalElement.cloneNode(true); // Deep clone, copies all child nodes and attributes
+                                        clonedElement.classList.add("refWater"); // Ensure unique ID if needed                                    
+                                        clonedElement.classList.remove("soloSky"); // Ensure unique ID if needed
+                                        clonedElement.classList.remove("soloHoldSky"); // Ensure unique ID if needed
+                                        clonedElement.style.height = "100%";
+                                        clonedElement.id = NTARow.NTANum + "largeWat"; // Ensure unique ID if needed
+                                        el.appendChild(clonedElement);
+                                    })
+                                }
+                            });
+
+                        largeEach.append("div")
+                            .attr("x", 10)
+                            .attr("y", 15)
+                            .attr("class", (function (data) {
+                                var watP = .01 * parseInt(NTARow.PctWater)
+                                var watH = (soloCardH - (soloCardH * .05)) * watP;
+                                console.log(watH)
+                                if (watH <= (soloCardH * .5)) {
+                                    return "titleCard"
+                                }
+                                else {
+                                    return "titleCardWht"
+                                }
+                                console.log((NTARow.NTAName) + " " + (watH))
+                            }))
+
+                            .html("<p>" + (NTARow.Borough) + ": " + (NTARow.NTANum) + "</p><h1>" + (NTARow.NTAName) + "</h1><p>Population: " + (NTARow.Population2020) + "</p>");
+                        ;
+
+                    })
+
+                    // THIS IS END OF MAP CLICK FOR LARGE CARDS
+                })
+
+                .on("dblclick", function (event, d) {
+                    d3.selectAll(".neighborOut")
+                        .style("fill-opacity", 0)
+                    d3.select(this)
+                        .style("fill-opacity", 0);
+                    // DONT THINK I NEED BELOW
+                    // var selectedNTA = (d.properties.nta2020);
+                    // console.log(selectedNTA);
+                    // ;
+                });
+        });
+
+
+
+
+
+
+
+    // function selectNTA (elementId, color) {
+    //     console.log(elementId);
+    //     const element = document.getElementById(elementId);
+    //     element.style.backgroundColor = color;
+    // }
+
+    const mng = mapManh.append('g');
+    const mnh = mapManh.append('g');
+    const mnj = mapManh.append('g');
+
+    d3.json("Manhattan_Sandy.geojson")
+        .then(data => {
+            console.log(data)
+            mnh.selectAll('path').data(data.features).enter().append('path').attr('class', 'flood').attr('d', manhPath)
+                ;
+        });
+
+    d3.json("Manhattan_NTAs.geojson")
+        .then(data => {
+            console.log(data);
+            mng.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighbor').attr('id', d => d.properties.nta2020).attr('d', manhPath)
+                .style('fill', '#9bcbe2')
+                ;
+            mnj.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighborOut').attr('id', d => d.properties.nta2020).attr('d', manhPath)
+                //  CLICK HERE IS JUST TO TEST FUNCTIONALITY FOR WHEN BOROUGHS ARE ALONE - AN BE DELETED LATER
+                .on("click", function (event, d) {
+                    //    console.log("clicked" + (d.NTANum)) 
+                    singBklyn.html(d.properties.ntaname)
+                });
+            ;
+        });
+
+
+    const qng = mapQueens.append('g');
+    const qnh = mapQueens.append('g');
+    const qnj = mapQueens.append('g');
+
+    d3.json("Queens_Sandy.geojson")
+        .then(data => {
+            console.log(data)
+            qnh.selectAll('path').data(data.features).enter().append('path').attr('class', 'flood').attr('d', queensPath)
+                ;
+        });
+
+    d3.json("Queens_NTAs.geojson")
+        .then(data => {
+            console.log(data);
+            qng.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighbor').attr('id', d => d.properties.nta2020).attr('d', queensPath)
+                .style('fill', '#9bcbe2')
+                ;
+            qnj.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighborOut').attr('id', d => d.properties.ntacode).attr('d', queensPath)
+                //  CLICK HERE IS JUST TO TEST FUNCTIONALITY FOR WHEN BOROUGHS ARE ALONE - AN BE DELETED LATER
+                .on("click", function (event, d) {
+                    //    console.log("clicked" + (d.NTANum)) 
+                    singBklyn.html(d.properties.ntaname)
+                });
+            ;
+        });
+
+    const stg = mapStaten.append('g');
+    const sth = mapStaten.append('g');
+    const stj = mapStaten.append('g');
+
+    d3.json("Staten_Sandy.geojson")
+        .then(data => {
+            console.log(data)
+            sth.selectAll('path').data(data.features).enter().append('path').attr('class', 'flood').attr('d', statenPath)
+                ;
+        });
+
+    d3.json("Staten_NTAs.geojson")
+        .then(data => {
+            console.log(data);
+            stg.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighbor').attr('id', d => d.properties.nta2020).attr('d', statenPath)
+                .style('fill', '#9bcbe2')
+                ;
+            stj.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighborOut').attr('id', d => d.properties.ntacode).attr('d', statenPath)
+                //  CLICK HERE IS JUST TO TEST FUNCTIONALITY FOR WHEN BOROUGHS ARE ALONE - AN BE DELETED LATER
+                .on("click", function (event, d) {
+                    //    console.log("clicked" + (d.NTANum)) 
+                    singBklyn.html(d.properties.ntaname)
+                });
+            ;
+        });
+
+
+    // DRAWING CARDS
+
+    // have to create contsant for card areas - will need to do for other boroughs
+    const bklynCards = d3.select("#bklyn")
+    // MAY HAVE TO CHANEG SOME OF OTHER ELEMENTS TO ALLOW THIS TO CHANGE FOR MOBILE, ETC - BUT MAY BE BETTER TO DO THROUGH CSS AS MOBILE AT END
+    var cardW = 120
+    var cardH = 80
+
+    var soloCardW = 600
+    var soloCardH = 400
+
+    // d3.csv("NTA_Test_Sheet2.csv").then(function (data) {
+    // d3.csv("Sandy_NTA_16Apr25_ManhattanReorder.csv").then(function (data) {
+    // d3.csv("Sandy_NTA_16Apr25_StatenReorder.csv").then(function (data) {
+    // d3.csv("Sandy_NTA_16Apr25_QueensReorder.csv").then(function (data) {
+    // d3.csv("Sandy_NTA_16Apr25_BronxReorder.csv").then(function (data) {
+    d3.csv("Sandy_NTA_11Apr25_BklynReorder.csv").then(function (data) {
+
+
+
+        bklynCards.selectAll("div")
+            .data(data)
+            .enter()
+            .append("div")
+            .attr("class", "testCard")
+
+            .attr("id", d => d.NTANum + "Card")
+            .style("width", cardW + "px")
+            .style("height", cardH + "px")
+            // .style("margin-left", "-10px")
+            .style("margin-left", "-" + (cardH * .025) + "px")
+            // .style("top", "Opx")
+            // TURN THIS BACK ON TO PLACE CARDS PROPERLY
+            .style("top", (function (d) {
+                var dropPer = .01 * parseInt(d => d.PctWater)
+                var drop = cardH * dropPer;
+                console.log(drop + "pixels");
+                dropPx = drop + "px"
+                return dropPx
+            })
+            )
+            .each(function (d) {
+                // console.log(d.code)
+                var eachCard = d3.select(this)
+
+                eachCard.append("div")
+                    // .attr("x", 10)
+                    // .attr("y", 10)
+                    .style("width", cardW + "px")
+                    .style("height", cardH + "px")
+                    .style("padding", (cardH * .025) + "px")
+
+                    // .style("width", cardW - (cardW * .032) + "px")
+                    // .style("height", cardH - (cardH * .05) + "px")
+                    .attr("id", d => d.NTANum + "Inner")
+                    .attr("class", "testInnerCard")
+
+                    .each(function (d) {
+                        var eachInner = d3.select(this)
+
+                        eachInner.append("div")
+                            .attr("class", "testSky")
+                            .attr("id", d => d.NTANum + "Sky")
+                            // .style("width", cardW - 20 + "px")
+                            .style("width", cardW - (cardH * .05) + "px")
+                            // .style("height", d => d.PctSky + "%")
+                            .style("height", (function (d) {
+
+                                var skyP = .01 * parseInt(d.PctSky)
+                                var skyH = (cardH - (cardH * .05)) * skyP;
+                                // console.log(drop + "pixels");
+                                skyHPx = skyH + "px"
+                                return skyHPx
+                            })
+                            )
+                            .each(function (d) {
+                                var eachSky = d3.select(this)
+
+                                eachSky.append("div")
+                                    .attr("class", "holdSky")
+                                    .each(function (d) {
+                                        var holdSky = d3.select(this)
+
+                                        // CAN SET IT TO CALL THIS FUNCTION REPEATEDLY - MORE EFFICIENT - BUT FINE FOR NOW
+                                        holdSky.each(function (d) {
+                                            let populated = d.Population2020.replace(/,/g, "");
+
+                                            var numberOfDivs = (Math.ceil(populated / 2500))
+                                            // var numberOfDivs = (Math.round(populated / 2500))
+
+                                            // var numberOfDivs = (Math.round(d.Population / 2500))
+                                            // console.log("these are " + numberOfDivs)
+
+                                            for (let i = 0; i < numberOfDivs; i++) {
+                                                // console.log("these are " + numberOfDivs)
+                                                holdSky.append("div")
+                                                    .attr("class", "popCol")
+
+                                                    .each(function (d) {
+
+                                                        var eachPopCol = d3.select(this)
+
+                                                        eachPopCol.append("img")
+                                                            .attr("class", "skyFig")
+                                                            // .attr("src", "AftTestFig.svg")  // can also add svg file here
+
+                                                            .attr("src", (function (d) {
+                                                                const myArray = ["SandyFigure1.png", "SandyFigure2.png", "SandyFigure3.png", "SandyFigure4.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure7.png", "SandyFigure8.png", "SandyFigure9.png", "SandyFigure10.png", "SandyFigure11.png", "SandyFigure12.png", "SandyFigure13.png", "SandyFigure14.png", "SandyFigure15.png"];
+                                                                //  not 1,4,7
+                                                                const myArrayAlt = ["SandyFigure2.png", "SandyFigure3.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure9.png"];
+
+                                                                if (numberOfDivs == 1) {
+
+                                                                    for (let i = 0; i < numberOfDivs; i++) {
+                                                                        const randomIndex = Math.floor(Math.random() * myArrayAlt.length);
+                                                                        const randomElement = myArrayAlt[randomIndex];
+                                                                        const elementPath = ("SandyFigures/" + randomElement)
+                                                                        // return randomElement;
+                                                                        // console.log(elementPath);
+                                                                        return elementPath
+                                                                        // Use randomElement in the loop
+                                                                    }
+                                                                } else {
+                                                                    for (let i = 0; i < numberOfDivs; i++) {
+                                                                        const randomIndex = Math.floor(Math.random() * myArray.length);
+                                                                        const randomElement = myArray[randomIndex];
+                                                                        const elementPath = ("SandyFigures/" + randomElement)
+                                                                        // return randomElement;
+                                                                        // console.log(elementPath);
+                                                                        return elementPath
+                                                                        // Use randomElement in the loop
+                                                                    }
+                                                                }
+                                                            }))
+                                                            ;
+                                                    })
+                                                    ;
+                                            }
+                                        })
+                                    });
+                            })
+
+                        eachInner.append("div")
+                            .attr("class", "testWater")
+                            .attr("id", d => d.NTANum + "Water")
+                            .style("position", "absolute")
+
+                            // (cardW * .02)
+                            .style("top", (d => d.PctSky) + 2 + "%")
+
+                            // .style("top", d => d.PctSky + "%")
+                            // .style("width", cardW - 20 + "px")
+                            .style("width", cardW - (cardH * .05) + "px")
+                            // .style("height", d => d.PctWater + "%")
+
+                            .style("height", (function (d) {
+                                var watP = .01 * parseInt(d.PctWater)
+                                var watH = (cardH - (cardH * .05)) * watP;
+                                // console.log(drop + "pixels");
+                                watHPx = watH + "px"
+                                return watHPx
+                            })
+                            )
+
+                            .each(function (d) {
+                                var eachWat = d3.select(this)
+                                if (d.PctWater >= 2) {
+
+                                    // CAN SET IT TO CALL THIS FUNCTION REPEATEDLY - MORE EFFICIENT - BUT FINE FOR NOW
+                                    eachWat.each(function (d) {
+
+                                        const el = document.querySelector("#" + d.NTANum + "Water");
+                                        // console.log(el);
+                                        // var originalElement = document.getElementById("BK0101Sky");
+                                        var originalElement = document.getElementById(d.NTANum + "Sky");
+                                        // console.log(originalElement);
+                                        var clonedElement = originalElement.cloneNode(true); // Deep clone, copies all child nodes and attributes
+                                        // clonedElement.id = "myElement-clone"; // Ensure unique ID if needed
+                                        // clonedElement.classList.add("watField"); // Ensure unique ID if needed
+                                        clonedElement.classList.add("refWater"); // Ensure unique ID if needed                                    
+                                        clonedElement.classList.remove("testSky"); // Ensure unique ID if needed
+                                        clonedElement.classList.remove("holdSky"); // Ensure unique ID if needed
+                                        clonedElement.style.height = "100%";
+                                        clonedElement.id = d.NTANum + "Wat"; // Ensure unique ID if needed
+                                        el.appendChild(clonedElement);
+
+                                    })
+                                }
+
+                            });
+
+                    })
+                    .on("click", function (event, d) {
+
+                        d3.selectAll(".neighborOut")
+                            .style("fill-opacity", 0)
+                        d3.select("#" + d.NTANum + "out.neighborOut")
+                            .style("fill-opacity", 0.3);
+
+
+
+                        console.log("clicked" + (d.NTANum))
+                        // singBklyn.html(d.NTANum)
+                        // alert('Clicked:' + (d.NTANum));
+
+                        // BEGINNING OF SINGLE CARD CODE
+                        // const singBklyn = d3.select("#singBklynCard");
+
+                        // singBklyn.selectAll("div")
+                        singBklyn.selectAll("*").remove();
+
+                        // d3.selectAll("#singBklynCard")
+
+                        // singBklyn.append("div").text(d.NTANum);
+                        singBklyn.append("div")
+                            .attr("class", "soloCard")
+                            .attr("id", d.NTANum + "soloCard")
+                            .style("width", soloCardW + "px")
+                            .style("height", soloCardH + "px")
+                            .style("top", "0px");
+                        // .text(d.NTANum);
+
+                        var largeEach = d3.select("#" + d.NTANum + "soloCard")
+
+                        largeEach.append("div")
+                            .style("width", soloCardW + "px")
+                            .style("height", soloCardH + "px")
+                            .style("padding", (soloCardH * .025) + "px")
+                            .attr("id", d.NTANum + "soloInner")
+                            .attr("class", "soloInnerCard");
+
+                        var largeInner = d3.select("#" + d.NTANum + "soloInner")
+
+                        largeInner.append("div")
+                            .attr("class", "soloSky")
+                            .attr("id", d.NTANum + "soloSky")
+                            .style("width", soloCardW - (soloCardH * .05) + "px")
+                            .style("height", (function (data) {
+                                var skyP = .01 * parseInt(d.PctSky)
+                                var skyH = (soloCardH - (soloCardH * .05)) * skyP;
+                                skyHPx = skyH + "px"
+                                return skyHPx
+                            })
+                            );
+
+
+                        var largeSky = d3.select("#" + d.NTANum + "soloSky")
+
+                        largeSky.append("div")
+                            .attr("class", "soloHoldSky")
+                            .attr("id", d.NTANum + "soloHoldSky");
+
+
+                        var largeHoldSky = d3.select("#" + d.NTANum + "soloHoldSky");
+
+                        // largeHoldSky.each(function (data) {
+                        //     var holdSky = d3.select(this)
+                        // CAN SET IT TO CALL THIS FUNCTION REPEATEDLY - MORE EFFICIENT - BUT FINE FOR NOW
+                        largeHoldSky.each(function (data) {
+                            let populated = d.Population2020.replace(/,/g, "");
+                            var numberOfDivs = (Math.ceil(populated / 2500))
+
+                            for (let i = 0; i < numberOfDivs; i++) {
+                                // console.log("these are " + numberOfDivs)
+                                largeHoldSky.append("div")
+                                    .attr("class", "soloPopCol")
+                                    .each(function (d) {
+                                        var eachPopCol = d3.select(this)
+
+                                        eachPopCol.append("img")
+                                            .attr("class", "soloSkyFig")
+                                            // .attr("src", "AftTestFig.svg")  // can also add svg file here
+                                            .attr("src", (function (d) {
+                                                const myArray = ["SandyFigure1.png", "SandyFigure2.png", "SandyFigure3.png", "SandyFigure4.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure7.png", "SandyFigure8.png", "SandyFigure9.png", "SandyFigure10.png", "SandyFigure11.png", "SandyFigure12.png", "SandyFigure13.png", "SandyFigure14.png", "SandyFigure15.png"];
+                                                const myArrayAlt = ["SandyFigure2.png", "SandyFigure3.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure9.png"];
+
+                                                if (numberOfDivs == 1) {
+
+                                                    for (let i = 0; i < numberOfDivs; i++) {
+                                                        const randomIndex = Math.floor(Math.random() * myArrayAlt.length);
+                                                        const randomElement = myArrayAlt[randomIndex];
+                                                        const elementPath = ("SandyFigures/" + randomElement)
+                                                        return elementPath
+                                                    }
+                                                } else {
+                                                    for (let i = 0; i < numberOfDivs; i++) {
+                                                        const randomIndex = Math.floor(Math.random() * myArray.length);
+                                                        const randomElement = myArray[randomIndex];
+                                                        const elementPath = ("SandyFigures/" + randomElement)
+                                                        return elementPath
+                                                    }
+                                                }
+                                            }))
+                                            ;
+                                    })
+                                    ;
+                            }
+                        })
+                        // });
+
+
+
+                        var largeInner = d3.select("#" + d.NTANum + "soloInner")
+
+
+                        largeInner.append("div")
+                            .attr("class", "soloWater")
+                            .attr("id", d.NTANum + "soloWater")
+                            .style("position", "absolute")
+                            // .style("top", (d => d.PctSky) + 2 + "%")
+                            .style("width", soloCardW - (soloCardH * .05) + "px")
+                            .style("height", (function (data) {
+                                var watP = .01 * parseInt(d.PctWater)
+                                var watH = (soloCardH - (soloCardH * .05)) * watP;
+                                watHPx = watH + "px"
+                                return watHPx
+                            })
+                            )
+                            .each(function (data) {
+                                var eachWat = d3.select(this)
+                                if (d.PctWater >= 2) {
+
+                                    // CAN SET IT TO CALL THIS FUNCTION REPEATEDLY - MORE EFFICIENT - BUT FINE FOR NOW
+                                    eachWat.each(function (data) {
+                                        const el = document.querySelector("#" + d.NTANum + "soloWater");
+                                        var originalElement = document.getElementById(d.NTANum + "soloSky");
+                                        var clonedElement = originalElement.cloneNode(true); // Deep clone, copies all child nodes and attributes
+                                        clonedElement.classList.add("refWater"); // Ensure unique ID if needed                                    
+                                        clonedElement.classList.remove("soloSky"); // Ensure unique ID if needed
+                                        clonedElement.classList.remove("soloHoldSky"); // Ensure unique ID if needed
+                                        clonedElement.style.height = "100%";
+                                        clonedElement.id = d.NTANum + "Wat"; // Ensure unique ID if needed
+                                        el.appendChild(clonedElement);
+                                    })
+                                }
+                            });
+
+                        largeEach.append("div")
+                            .attr("x", 10)
+                            .attr("y", 15)
+                            .attr("class", (function (data) {
+                                var watP = .01 * parseInt(d.PctWater)
+                                var watH = (soloCardH - (soloCardH * .05)) * watP;
+                                console.log(watH)
+                                if (watH <= (soloCardH * .5)) {
+                                    return "titleCard"
+                                }
+                                else {
+                                    return "titleCardWht"
+                                }
+                                console.log((d.NTAName) + " " + (watH))
+                            }))
+
+                            .html("<p>" + (d.Borough) + ": " + (d.NTANum) + "</p><h1>" + (d.NTAName) + "</h1><p>Population: " + (d.Population2020) + "</p>");
+                        ;
+
+                        // END OF SINGLE CARD CODE
+
+                    });
+                ;
+                // console.log(numberOfDivs);
+
+                eachCard.append("div")
+                    .attr("x", 10)
+                    .attr("y", 15)
+                    .attr("class", (function (d) {
+                        var watP = .01 * parseInt(d.PctWater)
+                        var watH = (cardH - (cardH * .05)) * watP;
+                        console.log(watH)
+                        if (watH <= (cardH * .5)) {
+                            return "titleCard"
+                        }
+                        else {
+                            return "titleCardWht"
+                        }
+                        console.log((d.NTAName) + " " + (watH))
+                    }))
+
+                    // FOR PRINTING LARGER, USE
+                    // .html("<p>" + (d.Borough) + ": " + (d.NTANum) + "</p><h1>" + (d.NTAName) + "</h1><p>Population: " + (d.Population2020) + "</p>");
+                    // FOR PRINTING JUST NUMBERS, USE
+                    .html("<h1><span class = justNum>" + (d.NTANum) + "</span><h1>")
+                    ;
+                // ***********going to need a version that keeps the comma, so it can be presented as string in text
+
+            })
+
+    })
+
+</script>
+
+
+</html>
