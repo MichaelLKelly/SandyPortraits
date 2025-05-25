@@ -1,0 +1,641 @@
+<style>
+/* --------------------THIS IS ALL FOR MAP??? - TO NEXT LINE???? ---------- */
+/* .country { */
+/* fill: white; */
+/* stroke: green;
+    z-index: 0;
+} */
+
+.neighbor {
+    /* fill: lightgray; */
+    stroke: #58585b;
+    stroke-width: .5px;
+    /* z-index: 150; */
+    box-shadow: inset 0px 0px 10px 10px #000000;
+}
+
+.neighborOut {
+    stroke: #58585b;
+    stroke-width: .5px;
+    fill: rgb(110, 33, 0);
+    fill-opacity: 0;
+    pointer-events: all;
+    /* fill: rgba(110, 33, 0, 0); */
+    /* fill: rgba(0, 0, 0, 0); */
+}
+
+.flood {
+    fill: #005a6a;
+    pointer-events: none;
+    /* fill: rgba(143, 188, 139, 0.6); */
+    z-index: 100;
+    /* stroke: green; */
+}
+
+/* .svgFlood {
+    z-index: 101;
+} */
+
+.svgNeighbor {
+    /* position: fixed; */
+    top: 0px;
+    z-index: 200;
+    /* filter: drop-shadow(0px 0px 2px rgb(100 100 100 / 0.4)); */
+    filter: drop-shadow(0px 0px 2px rgba(143, 188, 139, 0.6));
+}
+
+#NTATip {
+    font-family: 'Figtree', 'Arial Narrow', Arial, sans-serif;
+    pointer-events: none;
+
+}
+
+
+body {
+    margin: 0px;
+    /* background-color: red; */
+    /* background-color: darkgray; */
+    height: 100%;
+    width: 100vw;
+    /* background-color: darkolivegreen; */
+    background-color: rgb(255, 255, 242);
+}
+
+/* ------------INTRO-------------------------- */
+
+#waterBG {
+    background-image: url("100yr_port_water_IMG_2571_crop1.png");
+    background-size: 200%;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+/* #waterBG img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+
+#sandyTitle {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 700px;
+    /* color: red; */
+    color: rgb(255, 255, 242);
+    font-family: Figtree;
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 50;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 2px #005a6a;
+
+}
+
+#sTitleOne {}
+
+#sTitleTwo {
+    transform: rotate(180deg);
+    opacity: 0.7;
+
+}
+
+.sandyIcon {
+    height: 40px;
+}
+
+.sandyTRule {
+    border-top: 3px dotted rgb(255, 255, 242);
+    /* background-color: none; */
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    width: 90%;
+    margin: 5px;
+}
+
+.sandyRule {
+    border-top: 1px dotted #58585b;
+    width: 90%;
+    max-width: 600px;
+}
+
+.sandySub {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    margin: 5% 0 5% 0;
+}
+
+
+#introText {
+    color: rgb(110 33 0);
+    margin: auto;
+    padding-top: 20px;
+    font-size: 21px;
+    line-height: 1.9;
+    font-family: 'Figtree', 'Arial Narrow', Arial, sans-serif;
+    width: 90%;
+    max-width: 650px;
+    /* z-index: 500; */
+}
+
+.introLead {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #005a6a;
+}
+
+.runningText {
+    color: #444444;
+    margin: auto;
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 1.9;
+    font-family: 'Georgia', serif;
+    text-wrap: pretty;
+    width: 90%;
+    max-width: 650px;
+}
+
+
+/* ------------INTRO-------------------------- */
+
+
+#fullSandyMap {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    /* background-color: red; */
+}
+
+#sandyKey {
+    height: 100vh;
+}
+
+/* CARD FIELDS */
+
+
+.boroHolder {
+    margin: auto;
+    padding: 20px 0px 20px 0px;
+    width: 90%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-top: 1px dotted #58585b;
+    border-bottom: 1px dotted #58585b;
+}
+
+.boroMap {
+    /* background-color: grey; */
+}
+
+.singCard {
+    background-color: none;
+    height: 400px;
+}
+
+.allNTAs {
+    margin: auto;
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 1.9;
+    font-family: 'Georgia', serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    color: rgb(110 33 0);
+    border-top: 1px dotted #58585b;
+
+}
+
+.linOCardHolder {
+    width: 100%;
+    overflow-x: auto;
+    /* overflow-y: hidden; */
+}
+
+.linOCards {
+    width: 42000px;
+    /* overflow-x: hidden; */
+}
+
+#bronx,
+#bklyn,
+#manh {
+    /* FOR PRINTING CHANGE THESE TWO */
+    height: 180px;
+    /* TO THESE TWO */
+    /* height: auto;
+    width: 100vw; */
+    /* AND THEN TURN OFF FUNCTION FOR CARD PLACEMENT -- and make margin on testCard 20px 20px*/
+    /* position: absolute; */
+    /* margin: 60px auto; */
+    /* display: inline-block; */
+    vertical-align: top;
+    padding-top: 10px;
+    padding-left: 20px;
+    /*THIS Creates HORIZONTAL*/
+    overflow: scroll;
+    overflow-y: hidden;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: left;
+    /* align-items: flex-start; */
+}
+
+
+.notes {
+    margin: auto;
+    padding: 20px 0px 20px 0px;
+    width: 90%;
+    max-width: 1000px;
+    /* border-top: 1px dotted #58585b; */
+    border-bottom: 1px dotted #58585b;
+    font-family: "Figtree", Arial, sans-serif;
+    font-size: 12px;
+}
+
+
+/* CHANGE TO CARD AT SOME POINT */
+
+.testCard {
+    /* width: 600px;
+    height: 400px; */
+    display: inline-block;
+    vertical-align: top;
+    /*THIS Creates HORIZONTAL*/
+    /* flex: none; */
+
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 5px darkslategrey;
+    /* margin: 20px 20px; */
+    /* margin: 20px auto; */
+    position: relative;
+    /* top: 80px: */
+    z-index: 100;
+}
+
+
+.soloCard {
+    display: inline-block;
+    vertical-align: top;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 5px darkslategrey;
+    position: relative;
+    z-index: 100;
+}
+
+
+
+
+/* CHNAGE TO INNERCARD  */
+.testInnerCard {
+    /* width: 580px;
+    height: 380px; */
+    box-sizing: border-box;
+    /* padding: 2% 2% 2% 2%; */
+    /* margin: 2% auto; */
+    /* position: absolute;
+    left: 10px; */
+}
+
+/* CHANGE TO SKY */
+.testSky {
+    background-color: #9bcbe2;
+    /* background-color: #A0C7DA; */
+    /* margin: 10px auto 0px auto; */
+    margin: 0px;
+    /* border: 2px solid whitesmoke;
+    box-sizing: border-box; */
+    /* width: 100%; */
+    /* FOR PRINTING - JUST TESTING IF REMOVING SECOND SHADOW HELPS WITH SOFT BLUE EDGE IN PRINT
+    IT DOES NOT */
+    /* box-shadow: inset 0px 3px 5px 3px whitesmoke, inset 0px 0px 50px lightskyblue; */
+    /* box-shadow: inset 0px 2px 5px 5px whitesmoke, inset 0px 0px 50px 5px lightskyblue; */
+    box-shadow: inset 0px 3px 5px 5px whitesmoke, inset 0px 0px 50px 5px lightskyblue;
+    /* position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end; */
+    /* opacity: 0.5; */
+}
+
+.soloSky {
+    background-color: #9bcbe2;
+    margin: 0px;
+    box-shadow: inset 0px 3px 5px 5px whitesmoke, inset 0px 0px 50px 5px lightskyblue;
+}
+
+
+
+.holdSky {
+    /* background-color: lightblue; */
+    /* margin: 10px auto 0px auto; */
+    margin: 0px;
+    height: 100%;
+
+    /* width: 100%; */
+
+    /* box-shadow: inset 0px 3px 5px 5px whitesmoke, inset 0px 0px 50px 5px lightskyblue; */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    opacity: 0.8;
+    /* opacity: 0.5; */
+}
+
+
+.soloHoldSky {
+    margin: 0px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    opacity: 0.8;
+}
+
+
+/* CHANGE TO WATER */
+.testWater {
+    /* background-color: darkseagreen; */
+    background-color: #005a6a;
+    /* margin: 10px auto 0px auto; */
+    margin: 0px;
+    /* ***THIS USE OF MARGIN SEEMS INELEGANT AND TROUBELSOME - MAY NEED TO LOOK AT IT AGAIN */
+    /* box-shadow: inset 0px -2px 5px 5px whitesmoke, inset 0px 0px 30px 5px mediumseagreen; */
+    /* border: 2px solid whitesmoke;
+    box-sizing: border-box; */
+
+    box-shadow: inset 0px -3px 5px 5px whitesmoke;
+    /* box-shadow: inset 0px -2px 5px 5px whitesmoke; */
+
+    /* border: none; */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    /* ORIGINAL VERSION HAD THE BELOW SETTINGS
+    margin: auto;
+    position: relative;
+    align-items: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; */
+}
+
+
+.soloWater {
+    background-color: #005a6a;
+    margin: 0px;
+    box-shadow: inset 0px -3px 5px 5px whitesmoke;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+.refWater {
+
+    /* background-color: darkseagreen; */
+    /* background-color: rgba(143, 188, 139, .6); */
+    /* margin: 10px auto 0px auto; */
+    /* ***THIS USE OF MARGIN SEEMS INELEGANT AND TROUBELSOME - MAY NEED TO LOOK AT IT AGAIN */
+    /* box-shadow: inset 0px -4px 5px 5px whitesmoke, inset 0px 2px 30px 5px mediumseagreen; */
+    /* border: none; */
+    transform: scaleY(-1);
+    height: 100%;
+    position: relative;
+    top: 0;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end; */
+
+    opacity: 0.6;
+    /* ORIGINAL VERSION HAD THE BELOW SETTINGS
+    margin: auto;
+    position: relative;
+    align-items: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; */
+}
+
+
+.popCol {
+    flex: 0 0 2%;
+    height: 100%;
+    text-align: center;
+    /* opacity: 0.5; */
+}
+
+.soloPopCol {
+    flex: 0 0 2%;
+    height: 100%;
+    text-align: center;
+    /* opacity: 0.5; */
+}
+
+.refWater .popCol img.skyFig {
+    height: 60%;
+}
+
+.refWater .soloPopCol img.soloSkyFig {
+    height: 60%;
+}
+
+
+/* HAD BEEN - MAYBE LOOK AT FLEX THERE? - THINK TEXT-ALIGN MAY BE SVG SPECIFIC IN ITS EFFECTIVENESS
+.figField {
+    width: 100%;
+    height: 40px;
+    z-index: 100;
+    margin-left: 0px;
+    opacity: 0.2;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.skyFig {
+    position: absolute;
+    bottom: 0px;
+    /* width: 20px; */
+    width: 4px;
+    transform: translate(-50%, 0%);
+    filter: drop-shadow(0px 0px 2px rgb(0 0 0 / 0.4));
+}
+
+.soloSkyFig {
+    position: absolute;
+    bottom: 0px;
+    /* width: 20px; */
+    width: 30px;
+    transform: translate(-50%, 0%);
+    filter: drop-shadow(0px 0px 2px rgb(0 0 0 / 0.4));
+}
+
+
+
+
+
+
+/* HAD BEEN
+.figure {
+    width: 20px;
+    height: 40px;
+    margin-left: 0px;
+    margin-right: -5px;
+} */
+
+.watFig {
+    position: absolute;
+    top: 0px;
+    width: 20px;
+    height: 70%;
+    /* height: 20%; */
+    transform: translate(-50%, 0%) scaleY(-1);
+    filter: drop-shadow(0px 0px 2px rgb(0 0 0 / 0.4));
+    /* transform: scaleY(-1);
+    width: 20px;
+    height: 70%;
+    z-index: 100;
+    margin-left: 0px;
+    margin-right: -5px; */
+}
+
+.watField {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 80%;
+    /* height: 20%; */
+    transform: scaleY(-1);
+    /* filter: drop-shadow(0px 0px 2px rgb(0 0 0 / 0.4)); */
+    /* transform: scaleY(-1);
+    width: 20px;
+    height: 70%;
+    z-index: 100;
+    margin-left: 0px;
+    margin-right: -5px; */
+}
+
+
+/* Keeping old versions commented out - for use in larger cards */
+.titleCard {
+    color: #58585b;
+    position: absolute;
+    top: 0px;
+    margin: 15px;
+    /* margin: 30px; */
+    width: 80%;
+    height: auto;
+    text-wrap-style: pretty;
+    pointer-events: none;
+}
+
+.titleCardWht {
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    margin: 15px;
+    /* margin: 30px; */
+    width: 80%;
+    height: auto;
+    text-wrap-style: pretty;
+    pointer-events: none;
+}
+
+.titleCard h1,
+.titleCardWht h1 {
+    /* font-size: 24px; */
+    /* font-size: 33px; */
+    font-size: 14px;
+    font-family: 'Figtree', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.titleCard p,
+.titleCardWht p {
+    font-size: 24px;
+    /* font-size: 12px; */
+    font-family: 'Figtree', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.justNum h1 {
+    /* font-size: 36px; */
+    font-size: 14px;
+    font-weight: 700;
+    /* font-size: 44px; */
+    /* color: grey; */
+    /* text-shadow: 0px 0px 10px cornflowerblue; */
+}
+
+
+/* HAD NOTE IN ORIGINAL - */
+/* will mkae these constants in d3 */
+/* REFERRING TO FIG FIELD AND FLIP FIGURE, ETC. which are now popCol, skyfig, etc. DOES THAT MAKE SENSE TO DO??? */
+
+
+/* NOT USED? */
+.flipFigField {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    margin-left: 0px;
+    opacity: 0.05;
+    position: absolute;
+    top: 0px;
+    /* text-align: center; */
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+
+.flipFigure {
+    transform: scaleY(-1);
+    width: 20px;
+    height: 70%;
+    z-index: 100;
+    /* opacity: 0.05; */
+    margin-left: 0px;
+    margin-right: -5px;
+}
+
+</style>
