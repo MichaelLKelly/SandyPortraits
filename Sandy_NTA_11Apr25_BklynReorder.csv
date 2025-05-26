@@ -1,0 +1,70 @@
+ReOrder,GeoType,Borough,NTANum,NTAName,borocode2,boroname2,nta2020_2,,ntaname_2,,countyfips_2,Sandy_PCT,PctWater,PctSky,ntaabbrev_2,ntatype_2,cdta2020,cdtaname_2,CD Type,NTA Type,Population2020
+1,NTA2020,Brooklyn,BK1001,Bay Ridge,3,Brooklyn,BK1001,Match,Bay Ridge,Match,47,0.04,4,96,ByRdg,0,BK10,BK10 Bay Ridge-Dyker Heights (CD 10 Approximation),,0,"86,779"
+2,NTA2020,Brooklyn,BK0702,Sunset Park (West),3,Brooklyn,BK0702,Match,Sunset Park (West),Match,47,0.23,23,77,SnstPk_W,0,BK07,BK07 Sunset Park-Windsor Terrace (CD 7 Approximation),,0,"54,473"
+3,NTA2020,Brooklyn,BK0601,"Carroll Gardens, Cobble Hill, Gowanus, Red Hook",3,Brooklyn,BK0601,Match,Carroll Gardens-Cobble Hill-Gowanus-Red Hook,No Match,47,0.41,41,59,CrrllGrdns,0,BK06,BK06 Park Slope-Carroll Gardens (CD 6 Approximation),,0,"59,166"
+4,NTA2020,Brooklyn,BK0201,Brooklyn Heights,3,Brooklyn,BK0201,Match,Brooklyn Heights,Match,47,0.11,11,89,BkHts,0,BK02,BK02 Downtown Brooklyn-Fort Greene (CD 2 Approximation),,0,"25,092"
+5,NTA2020,Brooklyn,BK0202,"Downtown Brooklyn, DUMBO, Boerum Hill",3,Brooklyn,BK0202,Match,Downtown Brooklyn-DUMBO-Boerum Hill,No Match,47,0.07,7,93,DwntwnBk,0,BK02,BK02 Downtown Brooklyn-Fort Greene (CD 2 Approximation),,0,"40,968"
+6,NTA2020,Brooklyn,BK0261,Brooklyn Navy Yard,3,Brooklyn,BK0261,Match,Brooklyn Navy Yard,Match,47,0.66,66,34,BkNvyYrd,6,BK02,BK02 Downtown Brooklyn-Fort Greene (CD 2 Approximation),,6,5
+7,NTA2020,Brooklyn,BK0203,Fort Greene,3,Brooklyn,BK0203,Match,Fort Greene,Match,47,0.01,1,99,FtGrn,0,BK02,BK02 Downtown Brooklyn-Fort Greene (CD 2 Approximation),,0,"32,938"
+8,NTA2020,Brooklyn,BK0204,Clinton Hill,3,Brooklyn,BK0204,Match,Clinton Hill,Match,47,0,0,100,ClntnHl,0,BK02,BK02 Downtown Brooklyn-Fort Greene (CD 2 Approximation),,0,"28,647"
+9,NTA2020,Brooklyn,BK0301,Bedford-Stuyvesant (West),3,Brooklyn,BK0301,Match,Bedford-Stuyvesant (West),Match,47,0,0,100,BdSty_W,0,BK03,BK03 Bedford-Stuyvesant (CD 3 Approximation),,0,"89,189"
+10,NTA2020,Brooklyn,BK0103,South Williamsburg,3,Brooklyn,BK0103,Match,South Williamsburg,Match,47,0.04,4,96,SWllmsbrg,0,BK01,BK01 Williamsburg-Greenpoint (CD 1 Equivalent),,0,"47,703"
+11,NTA2020,Brooklyn,BK0102,Williamsburg,3,Brooklyn,BK0102,Match,Williamsburg,Match,47,0.13,13,87,Wllmsbrg,0,BK01,BK01 Williamsburg-Greenpoint (CD 1 Equivalent),,0,"64,444"
+12,NTA2020,Brooklyn,BK0101,Greenpoint,3,Brooklyn,BK0101,Match,Greenpoint,Match,47,0.32,32,68,Grnpt,0,BK01,BK01 Williamsburg-Greenpoint (CD 1 Equivalent),,0,"38,980"
+13,NTA2020,Brooklyn,BK0104,East Williamsburg,3,Brooklyn,BK0104,Match,East Williamsburg,Match,47,0.1,10,90,EWllmsbrg,0,BK01,BK01 Williamsburg-Greenpoint (CD 1 Equivalent),,0,"52,998"
+14,NTA2020,Brooklyn,BK0401,Bushwick (West),3,Brooklyn,BK0401,Match,Bushwick (West),Match,47,0,0,100,Bshwck_W,0,BK04,BK04 Bushwick (CD 4 Equivalent),,0,"58,692"
+15,NTA2020,Brooklyn,BK0402,Bushwick (East),3,Brooklyn,BK0402,Match,Bushwick (East),Match,47,0,0,100,Bshwck_E,0,BK04,BK04 Bushwick (CD 4 Equivalent),,0,"62,049"
+16,NTA2020,Brooklyn,BK0302,Bedford-Stuyvesant (East),3,Brooklyn,BK0302,Match,Bedford-Stuyvesant (East),Match,47,0,0,100,BdSty_E,0,BK03,BK03 Bedford-Stuyvesant (CD 3 Approximation),,0,"84,653"
+17,NTA2020,Brooklyn,BK0802,Crown Heights (North),3,Brooklyn,BK0802,Match,Crown Heights (North),Match,47,0,0,100,CrwnHts_N,0,BK08,BK08 Crown Heights (North) (CD 8 Approximation),,0,"85,275"
+18,NTA2020,Brooklyn,BK0801,Prospect Heights,3,Brooklyn,BK0801,Match,Prospect Heights,Match,47,0,0,100,PrspctHts,0,BK08,BK08 Crown Heights (North) (CD 8 Approximation),,0,"23,515"
+19,NTA2020,Brooklyn,BK0602,Park Slope,3,Brooklyn,BK0602,Match,Park Slope,Match,47,0,0,100,PkSlp,0,BK06,BK06 Park Slope-Carroll Gardens (CD 6 Approximation),,0,"57,405"
+20,NTA2020,Brooklyn,BK0701,"Windsor Terrace, South Slope",3,Brooklyn,BK0701,Match,Windsor Terrace-South Slope,No Match,47,0,0,100,WndsrTr,0,BK07,BK07 Sunset Park-Windsor Terrace (CD 7 Approximation),,0,"23,622"
+21,NTA2020,Brooklyn,BK0771,Green-Wood Cemetery,3,Brooklyn,BK0771,Match,Green-Wood Cemetery,Match,47,0,0,100,GrnWdCem,7,BK07,BK07 Sunset Park-Windsor Terrace (CD 7 Approximation),,7,5
+22,NTA2020,Brooklyn,BK0703,Sunset Park (Central),3,Brooklyn,BK0703,Match,Sunset Park (Central),Match,47,0,0,100,SnstPk_C,0,BK07,BK07 Sunset Park-Windsor Terrace (CD 7 Approximation),,0,"55,606"
+23,NTA2020,Brooklyn,BK1201,"Sunset Park (East), Borough Park (West)",3,Brooklyn,BK1201,Match,Sunset Park (East)-Borough Park (West),No Match,47,0,0,100,SnstPk_E,0,BK12,BK12 Borough Park-Kensington (CD 12 Approximation),,0,"35,632"
+24,NTA2020,Brooklyn,BK1202,Borough Park,3,Brooklyn,BK1202,Match,Borough Park,Match,47,0,0,100,BoroPk,0,BK12,BK12 Borough Park-Kensington (CD 12 Approximation),,0,"93,905"
+25,NTA2020,Brooklyn,BK1002,Dyker Heights,3,Brooklyn,BK1002,Match,Dyker Heights,Match,47,0,0,100,DykrHts,0,BK10,BK10 Bay Ridge-Dyker Heights (CD 10 Approximation),,0,"46,756"
+26,NTA2020,Brooklyn,BK1091,Dyker Beach Park,3,Brooklyn,BK1091,Match,Dyker Beach Park,Match,47,0.13,13,87,DykrBchPk,9,BK10,BK10 Bay Ridge-Dyker Heights (CD 10 Approximation),,9,9
+27,NTA2020,Brooklyn,BK1061,Fort Hamilton,3,Brooklyn,BK1061,Match,Fort Hamilton,Match,47,0.14,14,86,FtHmltn,6,BK10,BK10 Bay Ridge-Dyker Heights (CD 10 Approximation),,6,775
+28,NTA2020,Brooklyn,BK1102,Bath Beach,3,Brooklyn,BK1102,Match,Bath Beach,Match,47,0.07,7,93,BthBch,0,BK11,BK11 Bensonhurst-Bath Beach (CD 11 Approximation),,0,"33,070"
+29,NTA2020,Brooklyn,BK1101,Bensonhurst,3,Brooklyn,BK1101,Match,Bensonhurst,Match,47,0,0,100,Bnsnhrst,0,BK11,BK11 Bensonhurst-Bath Beach (CD 11 Approximation),,0,"104,934"
+30,NTA2020,Brooklyn,BK1204,"Mapleton, Midwood (West)",3,Brooklyn,BK1204,Match,Mapleton-Midwood (West),No Match,47,0,0,100,Mpltn,0,BK12,BK12 Borough Park-Kensington (CD 12 Approximation),,0,"39,137"
+31,NTA2020,Brooklyn,BK1402,"Flatbush (West), Ditmas Park, Parkville",3,Brooklyn,BK1402,Match,Flatbush (West)-Ditmas Park-Parkville,No Match,47,0,0,100,Fltbsh_W,0,BK14,BK14 Flatbush-Midwood (CD 14 Approximation),,0,"43,016"
+32,NTA2020,Brooklyn,BK1203,Kensington,3,Brooklyn,BK1203,Match,Kensington,Match,47,0,0,100,Knsngtn,0,BK12,BK12 Borough Park-Kensington (CD 12 Approximation),,0,"41,758"
+33,NTA2020,Brooklyn,BK5591,Prospect Park,3,Brooklyn,BK5591,Match,Prospect Park,Match,47,0,0,100,PrspctPk,9,BK55,BK55 Prospect Park (JIA 55 Approximation),,9,15
+34,NTA2020,Brooklyn,BK0902,"Prospect Lefferts Gardens, Wingate",3,Brooklyn,BK0902,Match,Prospect Lefferts Gardens-Wingate,No Match,47,0,0,100,PLG_Wngt,0,BK09,BK09 Crown Heights (South) (CD 9 Approximation),,0,"49,513"
+35,NTA2020,Brooklyn,BK0901,Crown Heights (South),3,Brooklyn,BK0901,Match,Crown Heights (South),Match,47,0,0,100,CrwnHts_S,0,BK09,BK09 Crown Heights (South) (CD 9 Approximation),,0,"50,590"
+36,NTA2020,Brooklyn,BK0891,Lincoln Terrace Park,3,Brooklyn,BK0891,Match,Lincoln Terrace Park,Match,47,0,0,100,LclnTrPk,9,BK08,BK08 Crown Heights (North) (CD 8 Approximation),,9,15
+37,NTA2020,Brooklyn,BK1601,Ocean Hill,3,Brooklyn,BK1601,Match,Ocean Hill,Match,47,0,0,100,OcnHl,0,BK16,BK16 Ocean Hill-Brownsville (CD 16 Approximation),,0,"37,952"
+38,NTA2020,Brooklyn,BK0471,The Evergreens Cemetery,3,Brooklyn,BK0471,Match,The Evergreens Cemetery,Match,47,0,0,100,EvrgrnsCem,7,BK04,BK04 Bushwick (CD 4 Equivalent),,7,6
+39,NTA2020,Brooklyn,BK0571,"Highland Park, Cypress Hills Cemeteries (South)",3,Brooklyn,BK0571,Match,Highland Park-Cypress Hills Cemeteries (South),No Match,47,0,0,100,CyHlsCem_S,7,BK05,BK05 East New York-Cypress Hills (CD 5 Approximation),,7,7
+40,NTA2020,Brooklyn,BK0501,Cypress Hills,3,Brooklyn,BK0501,Match,Cypress Hills,Match,47,0,0,100,CyprssHls,0,BK05,BK05 East New York-Cypress Hills (CD 5 Approximation),,0,"43,256"
+41,NTA2020,Brooklyn,BK0502,East New York (North),3,Brooklyn,BK0502,Match,East New York (North),Match,47,0,0,100,ENY_N,0,BK05,BK05 East New York-Cypress Hills (CD 5 Approximation),,0,"42,818"
+42,NTA2020,Brooklyn,BK1602,Brownsville,3,Brooklyn,BK1602,Match,Brownsville,Match,47,0,0,100,Brwnsvl,0,BK16,BK16 Ocean Hill-Brownsville (CD 16 Approximation),,0,"60,470"
+43,NTA2020,Brooklyn,BK1704,"East Flatbush, Remsen Village",3,Brooklyn,BK1704,Match,East Flatbush-Remsen Village,No Match,47,0,0,100,EFb_RmsnVl,0,BK17,BK17 East Flatbush (CD 17 Approximation),,0,"39,115"
+44,NTA2020,Brooklyn,BK1703,"East Flatbush, Rugby",3,Brooklyn,BK1703,Match,East Flatbush-Rugby,No Match,47,0,0,100,EFb_Rgby,0,BK17,BK17 East Flatbush (CD 17 Approximation),,0,"42,762"
+45,NTA2020,Brooklyn,BK1771,Holy Cross Cemetery,3,Brooklyn,BK1771,Match,Holy Cross Cemetery,Match,47,0,0,100,HlyCrssCem,7,BK17,BK17 East Flatbush (CD 17 Approximation),,7,32
+46,NTA2020,Brooklyn,BK1702,"East Flatbush, Farragut",3,Brooklyn,BK1702,Match,East Flatbush-Farragut,No Match,47,0,0,100,EFb_Frrgt,0,BK17,BK17 East Flatbush (CD 17 Approximation),,0,"34,317"
+47,NTA2020,Brooklyn,BK1701,"East Flatbush, Erasmus",3,Brooklyn,BK1701,Match,East Flatbush-Erasmus,No Match,47,0,0,100,EFb_Ersms,0,BK17,BK17 East Flatbush (CD 17 Approximation),,0,"47,690"
+48,NTA2020,Brooklyn,BK1401,Flatbush,3,Brooklyn,BK1401,Match,Flatbush,Match,47,0,0,100,Fltbsh,0,BK14,BK14 Flatbush-Midwood (CD 14 Approximation),,0,"66,503"
+49,NTA2020,Brooklyn,BK1403,Midwood,3,Brooklyn,BK1403,Match,Midwood,Match,47,0,0,100,Mdwd,0,BK14,BK14 Flatbush-Midwood (CD 14 Approximation),,0,"52,891"
+50,NTA2020,Brooklyn,BK1502,Madison,3,Brooklyn,BK1502,Match,Madison,Match,47,0.02,2,98,Mdsn,0,BK15,BK15 Sheepshead Bay-Gravesend (East) (CD 15 Approximation),,0,"41,465"
+51,NTA2020,Brooklyn,BK1501,"Gravesend (East), Homecrest",3,Brooklyn,BK1501,Match,Gravesend (East)-Homecrest,No Match,47,0.14,14,86,Grvsnd_E,0,BK15,BK15 Sheepshead Bay-Gravesend (East) (CD 15 Approximation),,0,"52,797"
+52,NTA2020,Brooklyn,BK1103,Gravesend (West),3,Brooklyn,BK1103,Match,Gravesend (West),Match,47,0.31,31,69,Grvsnd_W,0,BK11,BK11 Bensonhurst-Bath Beach (CD 11 Approximation),,0,"60,523"
+53,NTA2020,Brooklyn,BK1391,Calvert Vaux Park,3,Brooklyn,BK1391,Match,Calvert Vaux Park,Match,47,0.36,36,64,ClvrtVxPk,9,BK13,BK13 Coney Island-Brighton Beach (CD 13 Approximation),,9,0
+54,NTA2020,Brooklyn,BK1301,Gravesend (South),3,Brooklyn,BK1301,Match,Gravesend (South),Match,47,0.84,84,16,Grvsnd_S,0,BK13,BK13 Coney Island-Brighton Beach (CD 13 Approximation),,0,"30,366"
+55,NTA2020,Brooklyn,BK1302,"Coney Island, Sea Gate",3,Brooklyn,BK1302,Match,Coney Island-Sea Gate,No Match,47,0.88,88,12,CnyIsl,0,BK13,BK13 Coney Island-Brighton Beach (CD 13 Approximation),,0,"49,517"
+56,NTA2020,Brooklyn,BK1303,Brighton Beach,3,Brooklyn,BK1303,Match,Brighton Beach,Match,47,0.88,88,12,BrghtnBch,0,BK13,BK13 Coney Island-Brighton Beach (CD 13 Approximation),,0,"33,568"
+57,NTA2020,Brooklyn,BK1503,"Sheepshead Bay, Manhattan Beach, Gerritsen Beach",3,Brooklyn,BK1503,Match,Sheepshead Bay-Manhattan Beach-Gerritsen Beach,No Match,47,0.68,68,32,ShpshdBy,0,BK15,BK15 Sheepshead Bay-Gravesend (East) (CD 15 Approximation),,0,"69,084"
+58,NTA2020,Brooklyn,BK1891,"Marine Park, Plumb Island",3,Brooklyn,BK1891,Match,Marine Park-Plumb Island,No Match,47,0.46,46,54,MrnPk_PIsl,9,BK18,BK18 Canarsie-Flatlands (CD 18 Approximation),,9,1
+59,NTA2020,Brooklyn,BK5691,"Barren Island, Floyd Bennett Field",3,Brooklyn,BK5691,Match,Barren Island-Floyd Bennett Field,No Match,47,0.4,40,60,BrrnIsl,9,BK56,BK56 Jamaica Bay (West) (JIA 56 Approximation),,9,21
+60,NTA2020,Brooklyn,BK1892,McGuire Fields,3,Brooklyn,BK1892,Match,McGuire Fields,Match,47,0.85,85,15,McGrFlds,9,BK18,BK18 Canarsie-Flatlands (CD 18 Approximation),,9,4
+61,NTA2020,Brooklyn,BK1802,"Marine Park, Mill Basin, Bergen Beach",3,Brooklyn,BK1802,Match,Marine Park-Mill Basin-Bergen Beach,No Match,47,0.38,38,62,MrnPk_MBsn,0,BK18,BK18 Canarsie-Flatlands (CD 18 Approximation),,0,"46,955"
+62,NTA2020,Brooklyn,BK1801,Flatlands,3,Brooklyn,BK1801,Match,Flatlands,Match,47,0.03,3,97,Fltlnds,0,BK18,BK18 Canarsie-Flatlands (CD 18 Approximation),,0,"67,087"
+63,NTA2020,Brooklyn,BK1803,Canarsie,3,Brooklyn,BK1803,Match,Canarsie,Match,47,0.37,37,63,Cnrsie,0,BK18,BK18 Canarsie-Flatlands (CD 18 Approximation),,0,"89,932"
+64,NTA2020,Brooklyn,BK1893,Canarsie Park & Pier,3,Brooklyn,BK1893,Match,Canarsie Park & Pier,Match,47,0.55,55,45,CnrsiePk,9,BK18,BK18 Canarsie-Flatlands (CD 18 Approximation),,9,5
+65,NTA2020,Brooklyn,BK5693,Shirley Chisholm State Park,3,Brooklyn,BK5693,Match,Shirley Chisholm State Park,Match,47,0.09,9,91,ShChshlmPk,9,BK56,BK56 Jamaica Bay (West) (JIA 56 Approximation),,9,0
+66,NTA2020,Brooklyn,BK0504,"Spring Creek, Starrett City",3,Brooklyn,BK0504,Match,Spring Creek-Starrett City,No Match,47,0.1,10,90,SpCrk_StrC,0,BK05,BK05 East New York-Cypress Hills (CD 5 Approximation),,0,"17,038"
+67,NTA2020,Brooklyn,BK0503,"East New York, New Lots",3,Brooklyn,BK0503,Match,East New York-New Lots,No Match,47,0.02,2,98,ENY_NwLts,0,BK05,BK05 East New York-Cypress Hills (CD 5 Approximation),,0,"53,004"
+68,NTA2020,Brooklyn,BK0505,"East New York, City Line",3,Brooklyn,BK0505,Match,East New York-City Line,No Match,47,0.06,6,94,ENY_CtyLn,0,BK05,BK05 East New York-Cypress Hills (CD 5 Approximation),,0,"45,559"
+69,NTA2020,Brooklyn,BK5692,Jamaica Bay (West),3,Brooklyn,BK5692,Match,Jamaica Bay (West),Match,47,0.41,41,59,JmcaBy_W,9,BK56,BK56 Jamaica Bay (West) (JIA 56 Approximation),,9,0
