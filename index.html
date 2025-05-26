@@ -550,6 +550,70 @@
 
 // tooltip2.style("visibility", "visible");
 
+
+                   var selectedNTA = (d.properties.nta2020);
+
+
+                    // d3.select("#" + d.properties.nta2020).append("div")
+                    //   .attr("id", "tooltip")
+                    //   .style("opacity", 0)
+                    //   .style("position", "absolute")
+                    //   .style("background-color", "white")
+                    //   .style("border", "1px solid black")
+                    //   .style("padding", "5px")
+                    //   .style("font-size", "12px");
+
+
+                    d3.csv("Sandy_NTA_11Apr25_BklynReorder.csv").then(function (data) {
+                        console.log(data);
+                        const NTARow = data.find(d => d.NTANum === selectedNTA);
+                        console.log("This is" + NTARow.NTANum);
+
+
+                        d3.select("#bklynMap").append("div")
+                        // .style("background-color", "green")
+                        // .attr("fill", "green");
+
+                      .attr("id", "NTATip")
+                      .style("opacity", 0)
+                      .style("position", "absolute")
+                      .style("background-color", "white")
+                      .style("border", "1px solid black")
+                      .style("padding", "5px")
+                      .style("font-size", "12px")
+                      .style("z-index", "600");
+
+                        d3.select("#NTATip")
+                            .style("opacity", 1)
+                            .style("left", (event.pageX + 10) + "px")
+                            .style("top", (event.pageY - 20) + "px")
+                            .html(NTARow.NTANum + "</br>" + NTARow.NTAName + "</br>" + NTARow.PctSky + "/" + NTARow.PctWater );
+
+
+
+                    //     d3.select("#tooltip")
+                    //         .style("opacity", 1)
+                    //         .style("left", (event.pageX + 10) + "px")
+                    //         .style("top", (event.pageY - 20) + "px")
+                    //         .text(NTARow.NTANum);
+
+                    // d3.select("#" + d.properties.nta2020).append("div")
+                    //   .attr("id", "tooltip")
+                    //   .style("opacity", 0)
+                    //   .style("position", "absolute")
+                    //   .style("background-color", "white")
+                    //   .style("border", "1px solid black")
+                    //   .style("padding", "5px")
+                    //   .style("font-size", "12px");
+
+
+
+
+                    })
+
+
+
+
                         
                 })
                 .on("mouseout", function (event, d) {
