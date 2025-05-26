@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>11May25 Portraits of Sandy</title>
+    <title>25May25 Portraits of Sandy</title>
 
     <link rel="stylesheet" href="sandyStyle.css">
 
@@ -115,6 +115,7 @@
     </div>
 
 
+    
 
     <div class="runningText" id="bronxText">
 
@@ -316,10 +317,6 @@
     // THIS IS TRYING TO CREATE A FUNCTION OT BE CALLED LATER FOR THE MAPS 
     // WILL NEED TO SOMEHOW REFERENCE EACH NTAS OWN NAME AND USE THAT TO CALL DATA FROM DSV... 
 
-
-   
-
-
     // DRAWING SANDY FULL MAP
 
     // Some constants I will need later
@@ -368,6 +365,7 @@
         .center([-73.95, 40.65])
         .scale(65000)
         // 50000 works well for large map
+        // .translate([(50%), (50%)]);
         .translate([((bmWidth) / 2), (bmHeight) / 2]);
     // .translate([0, 0]);
 
@@ -488,7 +486,7 @@
     const bkj = mapBklyn.append('g');
 
 
-    
+
 
     d3.json("Brooklyn_Sandy.geojson")
         .then(data => {
@@ -504,40 +502,40 @@
                 .style('fill', '#9bcbe2')
                 ;
             bkj.selectAll('path').data(data.features).enter().append('path').attr('class', 'neighborOut').attr('id', d => d.properties.nta2020 + "out").attr('d', bklynPath)
-            
+
                 //  CLICK HERE IS JUST TO TEST FUNCTIONALITY FOR WHEN BOROUGHS ARE ALONE - AN BE DELETED LATER
                 // .on("click", selectNTA(d => d.properties.nta2020, "red"))
 
-// var tooltip2 = d3.selectAll('path')
-//   .append("div")
-//   .attr('id', "tip" + d.properties.nta2020)
-//     .style("position", "absolute")
-//     .style("visibility", "hidden")
-//     .style("background-color", "white")
-//     .style("border", "solid")
-//     .style("border-width", "1px")
-//     .style("border-radius", "5px")
-//     .style("padding", "10px")
-//     .html("<p>I'm a tooltip written in HTML</p><img src='https://github.com/holtzy/D3-graph-gallery/blob/master/img/section/ArcSmal.png?raw=true'></img><br>Fancy<br><span style='font-size: 40px;'>Isn't it?</span>");
+                // var tooltip2 = d3.selectAll('path')
+                //   .append("div")
+                //   .attr('id', "tip" + d.properties.nta2020)
+                //     .style("position", "absolute")
+                //     .style("visibility", "hidden")
+                //     .style("background-color", "white")
+                //     .style("border", "solid")
+                //     .style("border-width", "1px")
+                //     .style("border-radius", "5px")
+                //     .style("padding", "10px")
+                //     .html("<p>I'm a tooltip written in HTML</p><img src='https://github.com/holtzy/D3-graph-gallery/blob/master/img/section/ArcSmal.png?raw=true'></img><br>Fancy<br><span style='font-size: 40px;'>Isn't it?</span>");
 
 
 
 
 
-// d3.select(this)
+                // d3.select(this)
                 .on("mouseover", function (event, d) {
 
 
-// var tooltip2 = d3.select(this)
-//   .append("div")
-//     .style("position", "absolute")
-//     .style("visibility", "hidden")
-//     .style("background-color", "white")
-//     .style("border", "solid")
-//     .style("border-width", "1px")
-//     .style("border-radius", "5px")
-//     .style("padding", "10px")
-//     .html("<p>I'm a tooltip written in HTML</p><img src='https://github.com/holtzy/D3-graph-gallery/blob/master/img/section/ArcSmal.png?raw=true'></img><br>Fancy<br><span style='font-size: 40px;'>Isn't it?</span>");
+                    // var tooltip2 = d3.select(this)
+                    //   .append("div")
+                    //     .style("position", "absolute")
+                    //     .style("visibility", "hidden")
+                    //     .style("background-color", "white")
+                    //     .style("border", "solid")
+                    //     .style("border-width", "1px")
+                    //     .style("border-radius", "5px")
+                    //     .style("padding", "10px")
+                    //     .html("<p>I'm a tooltip written in HTML</p><img src='https://github.com/holtzy/D3-graph-gallery/blob/master/img/section/ArcSmal.png?raw=true'></img><br>Fancy<br><span style='font-size: 40px;'>Isn't it?</span>");
 
 
 
@@ -548,10 +546,7 @@
                         .style("stroke", "rgb(110, 33, 0)")
                         .style("stroke-width", "1px");
 
-// tooltip2.style("visibility", "visible");
-
-
-                   var selectedNTA = (d.properties.nta2020);
+                    var selectedNTA = (d.properties.nta2020);
 
 
                     // d3.select("#" + d.properties.nta2020).append("div")
@@ -614,12 +609,22 @@
 
 
 
-                        
+
+
+
+
+                    // tooltip2.style("visibility", "visible");
+
+
                 })
                 .on("mouseout", function (event, d) {
                     d3.selectAll(".neighborOut")
                         .style("stroke", "#58585b")
                         .style("stroke-width", ".5px");
+
+    d3.select("#NTATip").style("opacity", 0);
+
+
                     // d3.select(this)
                     //     .style("stroke", "rgb(110, 33, 0)")
                     //     .style("stroke-width", "1px");
@@ -639,6 +644,10 @@
                         console.log(NTARow);
                         console.log("NTANum is " + NTARow.NTANum);
                         // });
+
+                    // d3.select("#" + d.properties.nta2020 + "out").append("div")
+
+
 
 
 
