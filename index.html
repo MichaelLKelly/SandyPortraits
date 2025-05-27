@@ -115,7 +115,7 @@
     </div>
 
 
-    
+
 
     <div class="runningText" id="bronxText">
 
@@ -140,20 +140,30 @@
     </div>
 
     <div class="boroHolder">
-        <div class="boroMap" id="bronxMap">
-            The Bronx<sup>1,2</sup>
-            Population: 1,472,654<sup>3</sup>
-            Total Sq MI: 42.2
+        <div class="boroTitle" id="bronxTitle">
+            <div class="boroMap" id="bronxMap">
+                <h3>The Bronx<span class="boroSup">1,2</span></h3>
+                <!-- Population: 1,472,654<span class="boroSup">3</span><br> -->
+                Population: 1,472,654<sup class="boroSupSm">3</sup><br>
+                Total Sq MI: 42.2
+            </div>
         </div>
 
         <div class="singCard" id="singBronxCard">
         </div>
     </div>
 
+    <div class="notes" id="bronxNotes">
+        1. The borough of The Bronx contains one Neighborhood Tabulation Area (NTA) with a Queens prefix, Riker’s Island (QN0151), home to New York City’s most well-known correctional facility. As the island was not considered low-lying, incarcerated individuals were not evacuated. When the Island emerged largely unscathed, they, along with employees of the facility, made a significant contribution to recovery efforts.
+2. Technically part of Manhattan, the neighborhood of Marble Hill is included here, as it falls into a Bronx NTA. (The neighborhood was separated from Manhattan Island by canal construction in the late nineteenth century.) 
+3. US Census, 2020.
+    </div>
+
+
     <div class="runningText" id="bklynText">
         <p>As becomes evident, boroughs and neighborhoods were not flooded equally by Sandy, but these cards are only
             part of the story of flooding related to climate change.</p>
-        <p>While Sandy’s storm surge flooded 88% of coastal Brighton Beach [in Brooklyn] (BK1303), farther inland
+        <p>While Sandy’s storm surge flooded 88% of coastal Brighton Beach (BK1303), farther inland
             neighborhoods like
             Prospect Heights (BK0801, an entirely dry card) have experienced overwhelming flooding more recently from
             less intense, unnamed storms. Rainwater cascaded down subway steps and walls, and residents forded streets
@@ -174,8 +184,8 @@
 
         <div class="boroMap" id="bklynMap">
             <div class="boroTitle" id="bklynTitle">
-                Brooklyn<sup>1</sup><br>
-                Population: 2,736,074<sup>2</sup><br>
+                <h3>Brooklyn<span class="boroSup">1</span></h3>
+                Population: 2,736,074<sup class="boroSupSm">2</sup><br>
                 Total Sq MI: 69.4
             </div>
         </div>
@@ -193,12 +203,18 @@
         2. US Census, 2020.
     </div>
 
+    <div class="allNTAs">ALL MANHATTAN NTAs</div>
+
+    <div class="linOCardHolder">
+        <div class="linOCards" id="manh" style="z-index: 300">
+        </div>
+    </div>
 
     <div class="boroHolder">
         <div class="boroMap" id="manhMap">
             <div class="boroTitle" id="manhTitle">
-                <h3>Manhattan</h3><sup>1,2</sup><br>
-                Population: 1,694,251<sup>3</sup><br>
+                <h3>Manhattan<span class="boroSup">1,2</span></h3>
+                Population: 1,694,251<sup class="boroSupSm">3</sup><br>
                 Total Sq MI: 22.7
             </div>
         </div>
@@ -207,11 +223,11 @@
         </div>
     </div>
 
-    <div class="allNTAs">ALL MANHATTAN NTAs</div>
+    <div class="notes" id="manhNotes">
+        1. Also known as New York County, the borough of Manhattan technically includes Marble Hill, which is not represented here, as that neighborhood falls into a Bronx NTA. (The neighborhood was separated from Manhattan Island by canal construction in the late nineteenth century.) 
+2. Some of the apparent small islands floating off Manhattan’s east and southeast are piers attached to Brooklyn and Queens but are part of Manhattan NTAs, a further suggestion of the interconnected nature of a port city.
+3. US Census, 2020.
 
-    <div class="linOCardHolder">
-        <div class="linOCards" id="manh" style="z-index: 300">
-        </div>
     </div>
 
     <div class="runningText" id="manhText">
@@ -229,11 +245,21 @@
     </div>
 
 
+    <div class="allNTAs">ALL QUEENS NTAs</div>
+
+
+    <div class="linOCardHolder">
+        <div class="linOCards" id="queens" style="z-index: 300">
+        </div>
+    </div>
+
     <div class="boroHolder">
         <div class="boroMap" id="queensMap">
-            Queens<sup>1</sup><br>
-            Population: 2,405,464<sup>2</sup><br>
-            Total Sq MI: 108.7
+            <div class="boroTitle" id="queensTitle">
+                <h3>Queens<span class="boroSup">1</span></h3>
+                Population: 2,405,464<sup class="boroSupSm">2</sup><br>
+                Total Sq MI: 108.7
+            </div>
         </div>
 
         <div class="singCard" id="singQueensCard">
@@ -242,12 +268,9 @@
         </div>
     </div>
 
-    <div class="allNTAs">ALL QUEENS NTAs</div>
-
-
-    <div class="linOCardHolder">
-        <div class="linOCards" id="queens" style="z-index: 300">
-        </div>
+    <div class="notes" id="queensNotes">
+        1. Southern Queens contains part of Jamaica Bay Wildlife Refuge in its south (QN8491). A number of these islands appear under water post-Sandy on a map produced by FEMA, but this is not represented in NYC Open Data. This NTA’s card shows no human population, but the refuge’s name suggests how nonhuman animal populations are also severely affected by climate change–related events like Sandy.
+2. US Census, 2020.
     </div>
 
     <div class="runningText" id="queensText">
@@ -261,13 +284,21 @@
 
     </div>
 
+    <div class="allNTAs">ALL STATEN ISLAND NTAs</div>
 
+    <div class="linOCardHolder">
+        <div class="linOCards" id="staten" style="z-index: 300">
+        </div>
+    </div>
 
     <div class="boroHolder">
+
         <div class="boroMap" id="statenMap">
-            Staten Island<sup>1</sup><br>
-            Population: 495,747<sup>2</sup><br>
-            Total Sq MI: 57.5
+            <div class="boroTitle" id="statenTitle">
+                <h3>Staten Island<span class="boroSup">1</span></h3>
+                Population: 495,747<sup class="boroSupSm"> 2</sup><br>
+                Total Sq MI: 57.5
+            </div>
         </div>
 
         <div class="singCard" id="singStatenCard">
@@ -276,11 +307,10 @@
         </div>
     </div>
 
-    <div class="allNTAs">ALL STATEN ISLAND NTAs</div>
-
-    <div class="linOCardHolder">
-        <div class="linOCards" id="staten" style="z-index: 300">
-        </div>
+    <div class="notes" id="statenNotes">
+        1. Also known as Richmond County, Staten Island had the highest percentage of land under water of the five
+        boroughs.
+        2. US Census, 2020.
     </div>
 
     <div class="runningText" id="statenText">
@@ -314,7 +344,7 @@
 
     // FUNCTION onclick
 
-    // THIS IS TRYING TO CREATE A FUNCTION OT BE CALLED LATER FOR THE MAPS 
+    // THIS IS TRYING TO CREATE A FUNCTION TO BE CALLED LATER FOR THE MAPS 
     // WILL NEED TO SOMEHOW REFERENCE EACH NTAS OWN NAME AND USE THAT TO CALL DATA FROM DSV... 
 
     // DRAWING SANDY FULL MAP
@@ -323,6 +353,9 @@
 
     const width = 600;
     const height = 600;
+
+
+
 
     const bmWidth = 300;
     const bmHeight = 400;
@@ -339,19 +372,21 @@
     const mapQueens = d3.select("#queensMap").append('svg').attr('width', bmWidth).attr('height', bmHeight).attr('class', 'svgNeighbor');
     const mapStaten = d3.select("#statenMap").append('svg').attr('width', bmWidth).attr('height', bmHeight).attr('class', 'svgNeighbor');
 
-    const svg = d3.select('#fullSandyMap').append('svg').attr('width', width).attr('height', height).attr('class', 'svgNeighbor');
-    //   const svg2 = d3.select('#fullSandyMap').append('svg').attr('width', width).attr('height', height).attr('class', 'svgFlood');
+    const svg = d3.select('#fullSandyMap').append('svg').attr('class', 'svgNeighbor');
+    // const svg = d3.select('#fullSandyMap').append('svg').attr('width', width).attr('height', height).attr('class', 'svgNeighbor');
 
-    // const projection = d3.geoMercator().scale(10).translate([width / 2, height / 1.4]);
+    const svgWidth = svg.node().clientWidth;
+    const svgHeight = svg.node().clientHeight;
 
-    // const projection = d3.geoTransverseMercator()
-    // .scale(1600);
 
     var projection = d3.geoMercator()
         .center([-73.94, 40.70])
         .scale(50000)
         // 50000 works well for large map
-        .translate([((width) / 2), (height) / 2]);
+        .translate([((svgWidth) / 2), (svgHeight) / 2]);
+    // .translate([((width) / 2), (height) / 2]);
+    // .attr(translate(50%, 50%);
+
     // .translate([0, 0]);
 
     var bronxProj = d3.geoMercator()
@@ -548,58 +583,42 @@
 
                     var selectedNTA = (d.properties.nta2020);
 
-
-                    // d3.select("#" + d.properties.nta2020).append("div")
-                    //   .attr("id", "tooltip")
-                    //   .style("opacity", 0)
-                    //   .style("position", "absolute")
-                    //   .style("background-color", "white")
-                    //   .style("border", "1px solid black")
-                    //   .style("padding", "5px")
-                    //   .style("font-size", "12px");
-
-
                     d3.csv("Sandy_NTA_11Apr25_BklynReorder.csv").then(function (data) {
                         console.log(data);
                         const NTARow = data.find(d => d.NTANum === selectedNTA);
                         console.log("This is" + NTARow.NTANum);
 
-
                         d3.select("#bklynMap").append("div")
-                        // .style("background-color", "green")
-                        // .attr("fill", "green");
-
-                      .attr("id", "NTATip")
-                      .style("opacity", 0)
-                      .style("position", "absolute")
-                      .style("background-color", "white")
-                      .style("border", "1px solid black")
-                      .style("padding", "5px")
-                      .style("font-size", "12px")
-                      .style("z-index", "600");
+                            .attr("id", "NTATip")
+                            .style("opacity", 0)
+                            .style("position", "absolute")
+                            .style("background-color", "white")
+                            .style("border", "1px solid black")
+                            .style("padding", "5px")
+                            .style("font-size", "12px")
+                            .style("z-index", "600");
 
                         d3.select("#NTATip")
                             .style("opacity", 1)
                             .style("left", (event.pageX + 10) + "px")
                             .style("top", (event.pageY - 20) + "px")
-                            .html(NTARow.NTANum + "</br>" + NTARow.NTAName + "</br>" + NTARow.PctSky + "/" + NTARow.PctWater );
+                            .html("<span class='tipNum'>" + NTARow.NTANum + "</span></br> <span class='tipName'>" + NTARow.NTAName + "</span></br>" + NTARow.PctSky + "/<span class='tipWater'>" + NTARow.PctWater + "</span>");
 
 
+                        //     d3.select("#tooltip")
+                        //         .style("opacity", 1)
+                        //         .style("left", (event.pageX + 10) + "px")
+                        //         .style("top", (event.pageY - 20) + "px")
+                        //         .text(NTARow.NTANum);
 
-                    //     d3.select("#tooltip")
-                    //         .style("opacity", 1)
-                    //         .style("left", (event.pageX + 10) + "px")
-                    //         .style("top", (event.pageY - 20) + "px")
-                    //         .text(NTARow.NTANum);
-
-                    // d3.select("#" + d.properties.nta2020).append("div")
-                    //   .attr("id", "tooltip")
-                    //   .style("opacity", 0)
-                    //   .style("position", "absolute")
-                    //   .style("background-color", "white")
-                    //   .style("border", "1px solid black")
-                    //   .style("padding", "5px")
-                    //   .style("font-size", "12px");
+                        // d3.select("#" + d.properties.nta2020).append("div")
+                        //   .attr("id", "tooltip")
+                        //   .style("opacity", 0)
+                        //   .style("position", "absolute")
+                        //   .style("background-color", "white")
+                        //   .style("border", "1px solid black")
+                        //   .style("padding", "5px")
+                        //   .style("font-size", "12px");
 
 
 
@@ -622,7 +641,7 @@
                         .style("stroke", "#58585b")
                         .style("stroke-width", ".5px");
 
-    d3.select("#NTATip").style("opacity", 0);
+                    d3.select("#NTATip").style("opacity", 0);
 
 
                     // d3.select(this)
@@ -645,7 +664,7 @@
                         console.log("NTANum is " + NTARow.NTANum);
                         // });
 
-                    // d3.select("#" + d.properties.nta2020 + "out").append("div")
+                        // d3.select("#" + d.properties.nta2020 + "out").append("div")
 
 
 
