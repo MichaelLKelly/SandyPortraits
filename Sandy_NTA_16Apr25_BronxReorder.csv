@@ -1,0 +1,51 @@
+ReOrder,GeoType,Borough,NTANum,NTAName,borocode2,boroname2,nta2020_2,,ntaname_2,,countyfips_2,Sandy_PCT,PctWater,PctSky,ntaabbrev_2,ntatype_2,cdta2020,cdtaname_2,CD Type,NTA Type,Population2020
+1,NTA2020,Bronx,BX0101,"Mott Haven, Port Morris",2,Bronx,BX0101,Match,Mott Haven-Port Morris,No Match,5,0.2,20,80,MttHvn,0,BX01,BX01 Melrose-Mott Haven-Port Morris (CD 1 Approximation),,0,"57,718"
+2,NTA2020,Bronx,BX0401,"Concourse, Concourse Village",2,Bronx,BX0401,Match,Concourse-Concourse Village,No Match,5,0.06,6,94,Cncrs,0,BX04,BX04 Highbridge-Concourse (CD 4 Approximation),,0,"69,387"
+3,NTA2020,Bronx,BX0491,"Yankee Stadium, Macombs Dam Park",2,Bronx,BX0491,Match,Yankee Stadium-Macombs Dam Park,No Match,5,0,0,100,YnkStdm,9,BX04,BX04 Highbridge-Concourse (CD 4 Approximation),,9,19
+4,NTA2020,Bronx,BX0402,Highbridge,2,Bronx,BX0402,Match,Highbridge,Match,5,0.08,8,92,Hghbrdg,0,BX04,BX04 Highbridge-Concourse (CD 4 Approximation),,0,"32,456"
+5,NTA2020,Bronx,BX0501,"University Heights (South), Morris Heights",2,Bronx,BX0501,Match,University Heights (South)-Morris Heights,No Match,5,0.08,8,92,UnvrsHts_S,0,BX05,BX05 Morris Heights-Mount Hope (CD 5 Approximation),,0,"54,682"
+6,NTA2020,Bronx,BX0701,"University Heights (North), Fordham",2,Bronx,BX0701,Match,University Heights (North)-Fordham,No Match,5,0.05,5,95,UnvrsHts_N,0,BX07,BX07 Fordham-Bedford Park-Norwood (CD 7 Approximation),,0,"46,538"
+7,NTA2020,Bronx,BX0801,"Kingsbridge Heights, Van Cortlandt Village",2,Bronx,BX0801,Match,Kingsbridge Heights-Van Cortlandt Village,No Match,5,0.02,2,98,KngbrdgHts,0,BX08,BX08 Riverdale-Kingsbridge-Marble Hill (CD 8 Approximation),,0,"35,777"
+8,NTA2020,Bronx,BX0802,"Kingsbridge, Marble Hill",2,Bronx,BX0802,Match,Kingsbridge-Marble Hill,No Match,5,0.09,9,91,Kngbrdg,0,BX08,BX08 Riverdale-Kingsbridge-Marble Hill (CD 8 Approximation),,0,"22,807"
+9,NTA2020,Bronx,BX0803,"Riverdale, Spuyten Duyvil",2,Bronx,BX0803,Match,Riverdale-Spuyten Duyvil,No Match,5,0.04,4,96,Rvrdl,0,BX08,BX08 Riverdale-Kingsbridge-Marble Hill (CD 8 Approximation),,0,"47,927"
+10,NTA2020,Bronx,BX2691,Van Cortlandt Park,2,Bronx,BX2691,Match,Van Cortlandt Park,Match,5,0,0,100,VnCrtldtPk,9,BX26,BX26 Van Cortlandt Park (JIA 26 Equivalent),,9,122
+11,NTA2020,Bronx,BX1271,Woodlawn Cemetery,2,Bronx,BX1271,Match,Woodlawn Cemetery,Match,5,0,0,100,WdlnCem,7,BX12,BX12 Wakefield-Williamsbridge-Eastchester (CD 12 Approximation),,7,2
+12,NTA2020,Bronx,BX0703,Norwood,2,Bronx,BX0703,Match,Norwood,Match,5,0,0,100,Nrwd,0,BX07,BX07 Fordham-Bedford Park-Norwood (CD 7 Approximation),,0,"43,466"
+13,NTA2020,Bronx,BX0702,Bedford Park,2,Bronx,BX0702,Match,Bedford Park,Match,5,0,0,100,BdfrdPk,0,BX07,BX07 Fordham-Bedford Park-Norwood (CD 7 Approximation),,0,"55,521"
+14,NTA2020,Bronx,BX0603,Belmont,2,Bronx,BX0603,Match,Belmont,Match,5,0,0,100,Blmnt,0,BX06,BX06 Tremont-Belmont-West Farms (CD 6 Approximation),,0,"35,825"
+15,NTA2020,Bronx,BX0503,Fordham Heights,2,Bronx,BX0503,Match,Fordham Heights,Match,5,0,0,100,FrdhmHts,0,BX05,BX05 Morris Heights-Mount Hope (CD 5 Approximation),,0,"32,099"
+16,NTA2020,Bronx,BX0502,Mount Hope,2,Bronx,BX0502,Match,Mount Hope,Match,5,0,0,100,MtHp,0,BX05,BX05 Morris Heights-Mount Hope (CD 5 Approximation),,0,"49,099"
+17,NTA2020,Bronx,BX0403,"Mount Eden, Claremont (West)",2,Bronx,BX0403,Match,Mount Eden-Claremont (West),No Match,5,0,0,100,MtEdn,0,BX04,BX04 Highbridge-Concourse (CD 4 Approximation),,0,"49,651"
+18,NTA2020,Bronx,BX0492,Claremont Park,2,Bronx,BX0492,Match,Claremont Park,Match,5,0,0,100,ClrmntPk,9,BX04,BX04 Highbridge-Concourse (CD 4 Approximation),,9,10
+19,NTA2020,Bronx,BX0302,"Claremont Village, Claremont (East)",2,Bronx,BX0302,Match,Claremont Village-Claremont (East),No Match,5,0,0,100,ClrmntVlg,0,BX03,BX03 Morrisania-Crotona Park East (CD 3 Approximation),,0,"24,553"
+20,NTA2020,Bronx,BX0301,Morrisania,2,Bronx,BX0301,Match,Morrisania,Match,5,0,0,100,Mrrsnia,0,BX03,BX03 Morrisania-Crotona Park East (CD 3 Approximation),,0,"37,607"
+21,NTA2020,Bronx,BX0102,Melrose,2,Bronx,BX0102,Match,Melrose,Match,5,0,0,100,Mlrs,0,BX01,BX01 Melrose-Mott Haven-Port Morris (CD 1 Approximation),,0,"42,651"
+22,NTA2020,Bronx,BX0202,Longwood,2,Bronx,BX0202,Match,Longwood,Match,5,0,0,100,Lngwd,0,BX02,BX02 Longwood-Hunts Point (CD 2 Approximation),,0,"40,289"
+23,NTA2020,Bronx,BX0303,Crotona Park East,2,Bronx,BX0303,Match,Crotona Park East,Match,5,0.03,3,97,CrtnaPkEst,0,BX03,BX03 Morrisania-Crotona Park East (CD 3 Approximation),,0,"30,158"
+24,NTA2020,Bronx,BX0391,Crotona Park,2,Bronx,BX0391,Match,Crotona Park,Match,5,0,0,100,CrtnaPk,9,BX03,BX03 Morrisania-Crotona Park East (CD 3 Approximation),,9,34
+25,NTA2020,Bronx,BX0602,Tremont,2,Bronx,BX0602,Match,Tremont,Match,5,0,0,100,Trmnt,0,BX06,BX06 Tremont-Belmont-West Farms (CD 6 Approximation),,0,"32,150"
+26,NTA2020,Bronx,BX0601,West Farms,2,Bronx,BX0601,Match,West Farms,Match,5,0.01,1,99,WstFrms,0,BX06,BX06 Tremont-Belmont-West Farms (CD 6 Approximation),,0,"20,147"
+27,NTA2020,Bronx,BX2791,Bronx Park,2,Bronx,BX2791,Match,Bronx Park,Match,5,0,0,100,BxPk,9,BX27,BX27 Bronx Park (JIA 27 Approximation),,9,69
+28,NTA2020,Bronx,BX1104,Allerton,2,Bronx,BX1104,Match,Allerton,Match,5,0,0,100,Allrtn,0,BX11,BX11 Pelham Parkway-Morris Park (CD 11 Approximation),,0,"34,623"
+29,NTA2020,Bronx,BX1201,"Williamsbridge, Olinville",2,Bronx,BX1201,Match,Williamsbridge-Olinville,No Match,5,0,0,100,Wllmsbrdg,0,BX12,BX12 Wakefield-Williamsbridge-Eastchester (CD 12 Approximation),,0,"61,346"
+30,NTA2020,Bronx,BX1203,"Wakefield, Woodlawn",2,Bronx,BX1203,Match,Wakefield-Woodlawn,No Match,5,0,0,100,Wkfld_Wdln,0,BX12,BX12 Wakefield-Williamsbridge-Eastchester (CD 12 Approximation),,0,"47,657"
+31,NTA2020,Bronx,BX1202,"Eastchester, Edenwald, Baychester",2,Bronx,BX1202,Match,Eastchester-Edenwald-Baychester,No Match,5,0.01,1,99,Estchstr,0,BX12,BX12 Wakefield-Williamsbridge-Eastchester (CD 12 Approximation),,0,"51,736"
+32,NTA2020,Bronx,BX1103,Pelham Gardens,2,Bronx,BX1103,Match,Pelham Gardens,Match,5,0,0,100,PlhmGrdns,0,BX11,BX11 Pelham Parkway-Morris Park (CD 11 Approximation),,0,"29,402"
+33,NTA2020,Bronx,BX1102,Morris Park,2,Bronx,BX1102,Match,Morris Park,Match,5,0,0,100,MrrsPk,0,BX11,BX11 Pelham Parkway-Morris Park (CD 11 Approximation),,0,"25,077"
+34,NTA2020,Bronx,BX1101,"Pelham Parkway, Van Nest",2,Bronx,BX1101,Match,Pelham Parkway-Van Nest,No Match,5,0,0,100,PlhmPkwy,0,BX11,BX11 Pelham Parkway-Morris Park (CD 11 Approximation),,0,"32,425"
+35,NTA2020,Bronx,BX0904,Parkchester,2,Bronx,BX0904,Match,Parkchester,Match,5,0,0,100,Pkchstr,0,BX09,BX09 Soundview-Parkchester (CD 9 Approximation),,0,"33,602"
+36,NTA2020,Bronx,BX0901,"Soundview, Bruckner, Bronx River",2,Bronx,BX0901,Match,Soundview-Bruckner-Bronx River,No Match,5,0.02,2,98,Sdvw_BxRvr,0,BX09,BX09 Soundview-Parkchester (CD 9 Approximation),,0,"74,342"
+37,NTA2020,Bronx,BX0201,Hunts Point,2,Bronx,BX0201,Match,Hunts Point,Match,5,0.12,12,88,HntsPt,0,BX02,BX02 Longwood-Hunts Point (CD 2 Approximation),,0,"15,131"
+38,NTA2020,Bronx,BX0991,Soundview Park,2,Bronx,BX0991,Match,Soundview Park,Match,5,0.02,2,98,SdvwPk,9,BX09,BX09 Soundview-Parkchester (CD 9 Approximation),,9,6
+39,NTA2020,Bronx,BX0902,"Soundview, Clason Point",2,Bronx,BX0902,Match,Soundview-Clason Point,No Match,5,0.06,6,94,Sdvw_ClsPt,0,BX09,BX09 Soundview-Parkchester (CD 9 Approximation),,0,"37,297"
+40,NTA2020,Bronx,BX0903,"Castle Hill, Unionport",2,Bronx,BX0903,Match,Castle Hill-Unionport,No Match,5,0.05,5,95,CstlHl,0,BX09,BX09 Soundview-Parkchester (CD 9 Approximation),,0,"41,420"
+41,NTA2020,Bronx,BX1001,Westchester Square,2,Bronx,BX1001,Match,Westchester Square,Match,5,0.06,6,94,WstchstrSq,0,BX10,BX10 Co-op City-Throgs Neck (CD 10 Approximation),,0,"17,376"
+42,NTA2020,Bronx,BX1091,"Ferry Point Park, St. Raymond Cemetery",2,Bronx,BX1091,Match,Ferry Point Park-St. Raymond Cemetery,No Match,5,0.2,20,80,FrryPtPk,9,BX10,BX10 Co-op City-Throgs Neck (CD 10 Approximation),,9,0
+43,NTA2020,Bronx,BX1002,"Throgs Neck, Schuylerville",2,Bronx,BX1002,Match,Throgs Neck-Schuylerville,No Match,5,0.11,11,89,ThrgsNck,0,BX10,BX10 Co-op City-Throgs Neck (CD 10 Approximation),,0,"48,116"
+44,NTA2020,Bronx,BX1161,Hutchinson Metro Center,2,Bronx,BX1161,Match,Hutchinson Metro Center,Match,5,0.18,18,82,HtchMtrCtr,6,BX11,BX11 Pelham Parkway-Morris Park (CD 11 Approximation),,6,297
+45,NTA2020,Bronx,BX1003,"Pelham Bay, Country Club, City Island",2,Bronx,BX1003,Match,Pelham Bay-Country Club-City Island,No Match,5,0.08,8,92,PlhmBy,0,BX10,BX10 Co-op City-Throgs Neck (CD 10 Approximation),,0,"29,462"
+46,NTA2020,Bronx,BX1004,Co-op City,2,Bronx,BX1004,Match,Co-op City,Match,5,0.03,3,97,CoopCty,0,BX10,BX10 Co-op City-Throgs Neck (CD 10 Approximation),,0,"37,369"
+47,NTA2020,Bronx,BX2891,Pelham Bay Park,2,Bronx,BX2891,Match,Pelham Bay Park,Match,5,0.26,26,74,PlhmByPk,9,BX28,BX28 Pelham Bay Park (JIA 28 Approximation),,9,28
+48,NTA2020,Bronx,BX1071,Hart Island,2,Bronx,BX1071,Match,Hart Island,Match,5,0.41,41,59,HrtIsl,7,BX10,BX10 Co-op City-Throgs Neck (CD 10 Approximation),,7,0
+49,NTA2020,Bronx,BX0291,North & South Brother Islands,2,Bronx,BX0291,Match,North & South Brother Islands,Match,5,0.68,68,32,BrthrIsls,9,BX02,BX02 Longwood-Hunts Point (CD 2 Approximation),,9,0
+50,NTA2020,Bronx,QN0151,Rikers Island,2,Bronx,QN0151,Match,Rikers Island,Match,5,0.03,3,97,RkrsIsl,5,QN01,QN01 Astoria-Queensbridge (CD 1 Equivalent),,5,"3,772"

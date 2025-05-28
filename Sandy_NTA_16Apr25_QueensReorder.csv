@@ -1,0 +1,83 @@
+ReOrder,GeoType,Borough,NTANum,NTAName,borocode2,boroname2,nta2020_2,,ntaname_2,,countyfips_2,Sandy_PCT,PctWater,PctSky,ntaabbrev_2,ntatype_2,cdta2020,cdtaname_2,CD Type,NTA Type,Population2020
+1,NTA2020,Queens,QN0202,Sunnyside,4,Queens,QN0202,Match,Sunnyside,Match,81,0.05,5,95,Snnysd,0,QN02,QN02 Long Island City-Sunnyside-Woodside (CD 2 Approximation),,0,"52,278"
+2,NTA2020,Queens,QN0201,"Long Island City, Hunters Point",4,Queens,QN0201,Match,Long Island City-Hunters Point,No Match,81,0.4,40,60,LIC,0,QN02,QN02 Long Island City-Sunnyside-Woodside (CD 2 Approximation),,0,"32,216"
+3,NTA2020,Queens,QN0261,Sunnyside Yards (South),4,Queens,QN0261,Match,Sunnyside Yards (South),Match,81,0.05,5,95,SnnysdYd_S,6,QN02,QN02 Long Island City-Sunnyside-Woodside (CD 2 Approximation),,6,36
+4,NTA2020,Queens,QN0105,"Queensbridge, Ravenswood, Dutch Kills",4,Queens,QN0105,Match,Queensbridge-Ravenswood-Dutch Kills,No Match,81,0.06,6,94,Qnsbrdg,0,QN01,QN01 Astoria-Queensbridge (CD 1 Equivalent),,0,"32,954"
+5,NTA2020,Queens,QN0102,"Old Astoria, Hallets Point",4,Queens,QN0102,Match,Old Astoria-Hallets Point,No Match,81,0.28,28,72,OldAstr,0,QN01,QN01 Astoria-Queensbridge (CD 1 Equivalent),,0,"18,927"
+6,NTA2020,Queens,QN0103,Astoria (Central),4,Queens,QN0103,Match,Astoria (Central),Match,81,0,0,100,Astr_C,0,QN01,QN01 Astoria-Queensbridge (CD 1 Equivalent),,0,"52,220"
+7,NTA2020,Queens,QN0191,Astoria Park,4,Queens,QN0191,Match,Astoria Park,Match,81,0.02,2,98,AstrPk,9,QN01,QN01 Astoria-Queensbridge (CD 1 Equivalent),,9,0
+8,NTA2020,Queens,QN0101,"Astoria (North), Ditmars, Steinway",4,Queens,QN0101,Match,Astoria (North)-Ditmars-Steinway,No Match,81,0.04,4,96,Astr_N,0,QN01,QN01 Astoria-Queensbridge (CD 1 Equivalent),,0,"50,225"
+9,NTA2020,Queens,QN8081,LaGuardia Airport,4,Queens,QN8081,Match,LaGuardia Airport,Match,81,0.63,63,37,LGA,8,QN80,QN80 LaGuardia Airport (JIA 80 Approximation),,8,0
+10,NTA2020,Queens,QN0302,East Elmhurst,4,Queens,QN0302,Match,East Elmhurst,Match,81,0,0,100,EstElmhrst,0,QN03,QN03 Jackson Heights-East Elmhurst (CD 3 Approximation),,0,"33,573"
+11,NTA2020,Queens,QN0303,North Corona,4,Queens,QN0303,Match,North Corona,Match,81,0,0,100,NrthCrna,0,QN03,QN03 Jackson Heights-East Elmhurst (CD 3 Approximation),,0,"43,434"
+12,NTA2020,Queens,QN8191,"Flushing Meadows, Corona Park",4,Queens,QN8191,Match,Flushing Meadows-Corona Park,No Match,81,0.44,44,56,FlshMdwCPk,9,QN81,QN81 Flushing Meadows-Corona Park (JIA 81 Approximation),,9,44
+13,NTA2020,Queens,QN0707,"Flushing, Willets Point",4,Queens,QN0707,Match,Flushing-Willets Point,No Match,81,0.11,11,89,Flshng,0,QN07,QN07 Flushing-Murray Hill-Whitestone (CD 7 Approximation),,0,"69,879"
+14,NTA2020,Queens,QN0701,College Point,4,Queens,QN0701,Match,College Point,Match,81,0.17,17,83,CllgPt,0,QN07,QN07 Flushing-Murray Hill-Whitestone (CD 7 Approximation),,0,"33,625"
+15,NTA2020,Queens,QN0704,"Murray Hill, Broadway Flushing",4,Queens,QN0704,Match,Murray Hill-Broadway Flushing,No Match,81,0,0,100,MryHl_BwyF,0,QN07,QN07 Flushing-Murray Hill-Whitestone (CD 7 Approximation),,0,"57,387"
+16,NTA2020,Queens,QN0702,"Whitestone, Beechhurst",4,Queens,QN0702,Match,Whitestone-Beechhurst,No Match,81,0.01,1,99,Whtstn,0,QN07,QN07 Flushing-Murray Hill-Whitestone (CD 7 Approximation),,0,"28,408"
+17,NTA2020,Queens,QN0703,"Bay Terrace, Clearview",4,Queens,QN0703,Match,Bay Terrace-Clearview,No Match,81,0.02,2,98,ByTr_Clrvw,0,QN07,QN07 Flushing-Murray Hill-Whitestone (CD 7 Approximation),,0,"23,287"
+18,NTA2020,Queens,QN0761,Fort Totten,4,Queens,QN0761,Match,Fort Totten,Match,81,0.15,15,85,FtTttn,6,QN07,QN07 Flushing-Murray Hill-Whitestone (CD 7 Approximation),,6,0
+19,NTA2020,Queens,QN1102,Bayside,4,Queens,QN1102,Match,Bayside,Match,81,0.02,2,98,Bysd,0,QN11,QN11 Auburndale-Bayside-Douglaston (CD 11 Approximation),,0,"35,588"
+20,NTA2020,Queens,QN1191,Alley Pond Park,4,Queens,QN1191,Match,Alley Pond Park,Match,81,0.14,14,86,AllyPndPk,9,QN11,QN11 Auburndale-Bayside-Douglaston (CD 11 Approximation),,9,85
+21,NTA2020,Queens,QN1103,"Douglaston, Little Neck",4,Queens,QN1103,Match,Douglaston-Little Neck,No Match,81,0.04,4,96,Dglstn,0,QN11,QN11 Auburndale-Bayside-Douglaston (CD 11 Approximation),,0,"25,262"
+22,NTA2020,Queens,QN1301,"Glen Oaks, Floral Park, New Hyde Park",4,Queens,QN1301,Match,Glen Oaks-Floral Park-New Hyde Park,No Match,81,0,0,100,GlnOks,0,QN13,QN13 Queens Village-Bellerose-Rosedale (CD 13 Approximation),,0,"23,364"
+23,NTA2020,Queens,QN1302,Bellerose,4,Queens,QN1302,Match,Bellerose,Match,81,0,0,100,Bllrs,0,QN13,QN13 Queens Village-Bellerose-Rosedale (CD 13 Approximation),,0,"26,566"
+24,NTA2020,Queens,QN1104,"Oakland Gardens, Hollis Hills",4,Queens,QN1104,Match,Oakland Gardens-Hollis Hills,No Match,81,0,0,100,OklndGrdns,0,QN11,QN11 Auburndale-Bayside-Douglaston (CD 11 Approximation),,0,"25,249"
+25,NTA2020,Queens,QN0891,Cunningham Park,4,Queens,QN0891,Match,Cunningham Park,Match,81,0,0,100,CnnghmPk,9,QN08,QN08 Fresh Meadows-Hillcrest-Briarwood (CD 8 Approximation),,9,5
+26,NTA2020,Queens,QN0804,"Jamaica Estates, Holliswood",4,Queens,QN0804,Match,Jamaica Estates-Holliswood,No Match,81,0,0,100,JmcaEstts,0,QN08,QN08 Fresh Meadows-Hillcrest-Briarwood (CD 8 Approximation),,0,"23,576"
+27,NTA2020,Queens,QN0803,"Fresh Meadows, Utopia",4,Queens,QN0803,Match,Fresh Meadows-Utopia,No Match,81,0,0,100,FrshMdws,0,QN08,QN08 Fresh Meadows-Hillcrest-Briarwood (CD 8 Approximation),,0,"23,434"
+28,NTA2020,Queens,QN1101,Auburndale,4,Queens,QN1101,Match,Auburndale,Match,81,0,0,100,Abrndl,0,QN11,QN11 Auburndale-Bayside-Douglaston (CD 11 Approximation),,0,"36,182"
+29,NTA2020,Queens,QN0705,East Flushing,4,Queens,QN0705,Match,East Flushing,Match,81,0,0,100,EstFlshng,0,QN07,QN07 Flushing-Murray Hill-Whitestone (CD 7 Approximation),,0,"34,704"
+30,NTA2020,Queens,QN0791,Kissena Park,4,Queens,QN0791,Match,Kissena Park,Match,81,0,0,100,KssnPk,9,QN07,QN07 Flushing-Murray Hill-Whitestone (CD 7 Approximation),,9,2
+31,NTA2020,Queens,QN0706,Queensboro Hill,4,Queens,QN0706,Match,Queensboro Hill,Match,81,0,0,100,QnsboroHl,0,QN07,QN07 Flushing-Murray Hill-Whitestone (CD 7 Approximation),,0,"23,638"
+32,NTA2020,Queens,QN0871,Mount Hebron & Cedar Grove Cemeteries,4,Queens,QN0871,Match,Mount Hebron & Cedar Grove Cemeteries,Match,81,0,0,100,MtHbrnCem,7,QN08,QN08 Fresh Meadows-Hillcrest-Briarwood (CD 8 Approximation),,7,1
+33,NTA2020,Queens,QN0801,Kew Gardens Hills,4,Queens,QN0801,Match,Kew Gardens Hills,Match,81,0,0,100,KwGrdnsHls,0,QN08,QN08 Fresh Meadows-Hillcrest-Briarwood (CD 8 Approximation),,0,"36,009"
+34,NTA2020,Queens,QN0802,"Pomonok, Electchester, Hillcrest",4,Queens,QN0802,Match,Pomonok-Electchester-Hillcrest,No Match,81,0,0,100,Pmnk_Hlcst,0,QN08,QN08 Fresh Meadows-Hillcrest-Briarwood (CD 8 Approximation),,0,"35,669"
+35,NTA2020,Queens,QN0805,"Jamaica Hills, Briarwood",4,Queens,QN0805,Match,Jamaica Hills-Briarwood,No Match,81,0,0,100,JmcaHls,0,QN08,QN08 Fresh Meadows-Hillcrest-Briarwood (CD 8 Approximation),,0,"39,292"
+36,NTA2020,Queens,QN0901,Kew Gardens,4,Queens,QN0901,Match,Kew Gardens,Match,81,0,0,100,KwGrdns,0,QN09,QN09 Kew Gardens-Richmond Hill-Woodhaven (CD 9 Approximation),,0,"24,371"
+37,NTA2020,Queens,QN0602,Forest Hills,4,Queens,QN0602,Match,Forest Hills,Match,81,0,0,100,FrstHls,0,QN06,QN06 Forest Hills-Rego Park (CD 6 Approximation),,0,"88,965"
+38,NTA2020,Queens,QN0601,Rego Park,4,Queens,QN0601,Match,Rego Park,Match,81,0,0,100,RegoPk,0,QN06,QN06 Forest Hills-Rego Park (CD 6 Approximation),,0,"30,741"
+39,NTA2020,Queens,QN0402,Corona,4,Queens,QN0402,Match,Corona,Match,81,0,0,100,Crna,0,QN04,QN04 Elmhurst-Corona (CD 4 Approximation),,0,"73,822"
+40,NTA2020,Queens,QN0401,Elmhurst,4,Queens,QN0401,Match,Elmhurst,Match,81,0,0,100,Elmhrst,0,QN04,QN04 Elmhurst-Corona (CD 4 Approximation),,0,"107,864"
+41,NTA2020,Queens,QN0301,Jackson Heights,4,Queens,QN0301,Match,Jackson Heights,Match,81,0,0,100,JcksnHts,0,QN03,QN03 Jackson Heights-East Elmhurst (CD 3 Approximation),,0,"101,848"
+42,NTA2020,Queens,QN0171,St. Michael's Cemetery,4,Queens,QN0171,Match,St. Michael's Cemetery,Match,81,0,0,100,StMchlCem,7,QN01,QN01 Astoria-Queensbridge (CD 1 Equivalent),,7,5
+43,NTA2020,Queens,QN0104,"Astoria (East), Woodside (North)",4,Queens,QN0104,Match,Astoria (East)-Woodside (North),No Match,81,0,0,100,Astr_E,0,QN01,QN01 Astoria-Queensbridge (CD 1 Equivalent),,0,"38,673"
+44,NTA2020,Queens,QN0161,Sunnyside Yards (North),4,Queens,QN0161,Match,Sunnyside Yards (North),Match,81,0,0,100,SnnysdYd_N,6,QN01,QN01 Astoria-Queensbridge (CD 1 Equivalent),,6,27
+45,NTA2020,Queens,QN0203,Woodside,4,Queens,QN0203,Match,Woodside,Match,81,0,0,100,Wdsd,0,QN02,QN02 Long Island City-Sunnyside-Woodside (CD 2 Approximation),,0,"53,188"
+46,NTA2020,Queens,QN0271,Calvary & Mount Zion Cemeteries,4,Queens,QN0271,Match,Calvary & Mount Zion Cemeteries,Match,81,0,0,100,ClvryCem,7,QN02,QN02 Long Island City-Sunnyside-Woodside (CD 2 Approximation),,7,0
+47,NTA2020,Queens,QN0501,Maspeth,4,Queens,QN0501,Match,Maspeth,Match,81,0.04,4,96,Mspth,0,QN05,QN05 Ridgewood-Maspeth-Middle Village (CD 5 Approximation),,0,"43,257"
+48,NTA2020,Queens,QN0571,Mount Olivet & All Faiths Cemeteries,4,Queens,QN0571,Match,Mount Olivet & All Faiths Cemeteries,Match,81,0,0,100,MtOlvtCem,7,QN05,QN05 Ridgewood-Maspeth-Middle Village (CD 5 Approximation),,7,3
+49,NTA2020,Queens,QN0504,Middle Village,4,Queens,QN0504,Match,Middle Village,Match,81,0,0,100,MddlVlg,0,QN05,QN05 Ridgewood-Maspeth-Middle Village (CD 5 Approximation),,0,"34,474"
+50,NTA2020,Queens,QN0573,St. John Cemetery,4,Queens,QN0573,Match,St. John Cemetery,Match,81,0,0,100,StJhnCem,7,QN05,QN05 Ridgewood-Maspeth-Middle Village (CD 5 Approximation),,7,3
+51,NTA2020,Queens,QN0503,Glendale,4,Queens,QN0503,Match,Glendale,Match,81,0,0,100,Glndl,0,QN05,QN05 Ridgewood-Maspeth-Middle Village (CD 5 Approximation),,0,"35,135"
+52,NTA2020,Queens,QN0572,Middle Village Cemetery,4,Queens,QN0572,Match,Middle Village Cemetery,Match,81,0,0,100,MddlVlgCem,7,QN05,QN05 Ridgewood-Maspeth-Middle Village (CD 5 Approximation),,7,0
+53,NTA2020,Queens,QN0502,Ridgewood,4,Queens,QN0502,Match,Ridgewood,Match,81,0,0,100,Rdgwd,0,QN05,QN05 Ridgewood-Maspeth-Middle Village (CD 5 Approximation),,0,"66,402"
+54,NTA2020,Queens,QN0574,"Highland Park, Cypress Hills Cemeteries (North)",4,Queens,QN0574,Match,Highland Park-Cypress Hills Cemeteries (North),No Match,81,0,0,100,CyHlsCem_N,7,QN05,QN05 Ridgewood-Maspeth-Middle Village (CD 5 Approximation),,7,20
+55,NTA2020,Queens,QN8291,Forest Park,4,Queens,QN8291,Match,Forest Park,Match,81,0,0,100,FrstPk,9,QN82,QN82 Forest Park (JIA 82 Approximation),,9,4
+56,NTA2020,Queens,QN0905,Woodhaven,4,Queens,QN0905,Match,Woodhaven,Match,81,0,0,100,Wdhvn,0,QN09,QN09 Kew Gardens-Richmond Hill-Woodhaven (CD 9 Approximation),,0,"41,948"
+57,NTA2020,Queens,QN0902,Richmond Hill,4,Queens,QN0902,Match,Richmond Hill,Match,81,0,0,100,RchmdHl,0,QN09,QN09 Kew Gardens-Richmond Hill-Woodhaven (CD 9 Approximation),,0,"34,100"
+58,NTA2020,Queens,QN0904,Ozone Park (North),4,Queens,QN0904,Match,Ozone Park (North),Match,81,0,0,100,OznPk_N,0,QN09,QN09 Kew Gardens-Richmond Hill-Woodhaven (CD 9 Approximation),,0,"27,312"
+59,NTA2020,Queens,QN1002,Ozone Park,4,Queens,QN1002,Match,Ozone Park,Match,81,0,0,100,OznPk,0,QN10,QN10 South Ozone Park-Howard Beach (CD 10 Approximation),,0,"23,518"
+60,NTA2020,Queens,QN1001,South Ozone Park,4,Queens,QN1001,Match,South Ozone Park,Match,81,0.01,1,99,SthOznPk,0,QN10,QN10 South Ozone Park-Howard Beach (CD 10 Approximation),,0,"79,540"
+61,NTA2020,Queens,QN0903,South Richmond Hill,4,Queens,QN0903,Match,South Richmond Hill,Match,81,0,0,100,SthRchmdHl,0,QN09,QN09 Kew Gardens-Richmond Hill-Woodhaven (CD 9 Approximation),,0,"24,141"
+62,NTA2020,Queens,QN1201,Jamaica,4,Queens,QN1201,Match,Jamaica,Match,81,0,0,100,Jmca,0,QN12,QN12 Jamaica-St. Albans-Hollis (CD 12 Approximation),,0,"60,993"
+63,NTA2020,Queens,QN1202,South Jamaica,4,Queens,QN1202,Match,South Jamaica,Match,81,0,0,100,SthJmca,0,QN12,QN12 Jamaica-St. Albans-Hollis (CD 12 Approximation),,0,"44,401"
+64,NTA2020,Queens,QN1203,Baisley Park,4,Queens,QN1203,Match,Baisley Park,Match,81,0.04,4,96,BslyPk,0,QN12,QN12 Jamaica-St. Albans-Hollis (CD 12 Approximation),,0,"43,090"
+65,NTA2020,Queens,QN1204,"Springfield Gardens (North), Rochdale Village",4,Queens,QN1204,Match,Springfield Gardens (North)-Rochdale Village,No Match,81,0,0,100,SpfGrdns_N,0,QN12,QN12 Jamaica-St. Albans-Hollis (CD 12 Approximation),,0,"32,883"
+66,NTA2020,Queens,QN1205,St. Albans,4,Queens,QN1205,Match,St. Albans,Match,81,0,0,100,StAlbns,0,QN12,QN12 Jamaica-St. Albans-Hollis (CD 12 Approximation),,0,"51,816"
+67,NTA2020,Queens,QN1206,Hollis,4,Queens,QN1206,Match,Hollis,Match,81,0,0,100,Hlls,0,QN12,QN12 Jamaica-St. Albans-Hollis (CD 12 Approximation),,0,"24,576"
+68,NTA2020,Queens,QN1303,Queens Village,4,Queens,QN1303,Match,Queens Village,Match,81,0,0,100,QnsVlg,0,QN13,QN13 Queens Village-Bellerose-Rosedale (CD 13 Approximation),,0,"54,345"
+69,NTA2020,Queens,QN1304,Cambria Heights,4,Queens,QN1304,Match,Cambria Heights,Match,81,0,0,100,CmbriaHts,0,QN13,QN13 Queens Village-Bellerose-Rosedale (CD 13 Approximation),,0,"19,081"
+70,NTA2020,Queens,QN1371,Montefiore Cemetery,4,Queens,QN1371,Match,Montefiore Cemetery,Match,81,0,0,100,MntfrCem,7,QN13,QN13 Queens Village-Bellerose-Rosedale (CD 13 Approximation),,7,0
+71,NTA2020,Queens,QN1305,Laurelton,4,Queens,QN1305,Match,Laurelton,Match,81,0,0,100,Lrltn,0,QN13,QN13 Queens Village-Bellerose-Rosedale (CD 13 Approximation),,0,"26,088"
+72,NTA2020,Queens,QN1307,Rosedale,4,Queens,QN1307,Match,Rosedale,Match,81,0.33,33,67,Rsdl,0,QN13,QN13 Queens Village-Bellerose-Rosedale (CD 13 Approximation),,0,"27,101"
+73,NTA2020,Queens,QN1306,"Springfield Gardens (South), Brookville",4,Queens,QN1306,Match,Springfield Gardens (South)-Brookville,No Match,81,0.34,34,66,SpfGrdns_S,0,QN13,QN13 Queens Village-Bellerose-Rosedale (CD 13 Approximation),,0,"23,103"
+74,NTA2020,Queens,QN8381,John F. Kennedy International Airport,4,Queens,QN8381,Match,John F. Kennedy International Airport,Match,81,0.52,52,48,JFK,8,QN83,QN83 JFK International Airport (JIA 83 Approximation),,8,2
+75,NTA2020,Queens,QN1003,"Howard Beach, Lindenwood",4,Queens,QN1003,Match,Howard Beach-Lindenwood,No Match,81,0.73,73,27,HwrdBch,0,QN10,QN10 South Ozone Park-Howard Beach (CD 10 Approximation),,0,"27,320"
+76,NTA2020,Queens,QN1091,Spring Creek Park,4,Queens,QN1091,Match,Spring Creek Park,Match,81,0.69,69,31,SpCrkPk,9,QN10,QN10 South Ozone Park-Howard Beach (CD 10 Approximation),,9,0
+77,NTA2020,Queens,QN8491,Jamaica Bay (East),4,Queens,QN8491,Match,Jamaica Bay (East),Match,81,0.4,40,60,JmcaBy_E,9,QN84,QN84 Jamaica Bay (East) (JIA 84 Approximation),,9,0
+78,NTA2020,Queens,QN1491,Rockaway Community Park,4,Queens,QN1491,Match,Rockaway Community Park,Match,81,0.38,38,62,RckwyCPk,9,QN14,QN14 The Rockaways (CD 14 Approximation),,9,12
+79,NTA2020,Queens,QN1401,"Far Rockaway, Bayswater",4,Queens,QN1401,Match,Far Rockaway-Bayswater,No Match,81,0.47,47,53,FrRckwy,0,QN14,QN14 The Rockaways (CD 14 Approximation),,0,"58,648"
+80,NTA2020,Queens,QN1402,"Rockaway Beach, Arverne, Edgemere",4,Queens,QN1402,Match,Rockaway Beach-Arverne-Edgemere,No Match,81,0.88,88,12,RckwyBch,0,QN14,QN14 The Rockaways (CD 14 Approximation),,0,"41,367"
+81,NTA2020,Queens,QN1403,"Breezy Point, Belle Harbor, Rockaway Park, Broad Channel",4,Queens,QN1403,Match,Breezy Point-Belle Harbor-Rockaway Park-Broad Channel,No Match,81,0.87,87,13,BrzyPt,0,QN14,QN14 The Rockaways (CD 14 Approximation),,0,"24,134"
+82,NTA2020,Queens,QN8492,"Jacob Riis Park, Fort Tilden, Breezy Point Tip",4,Queens,QN8492,Match,Jacob Riis Park-Fort Tilden-Breezy Point Tip,No Match,81,0.81,81,19,JcbRsPk,9,QN84,QN84 Jamaica Bay (East) (JIA 84 Approximation),,9,24
