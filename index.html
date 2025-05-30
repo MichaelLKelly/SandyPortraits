@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>Portraits of Sandy</title>
+
+    <!-- FOR RESPONSIVE? -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <link rel="stylesheet" href="sandyStyle.css">
 
@@ -650,149 +653,149 @@
 
     // DRAW THE KEY
 
-    const singKey = d3.select("#keyCard");
+    // const singKey = d3.select("#keyCard");
 
-    var keyNTA = ("BX0101");
-    console.log(keyNTA);
+    // var keyNTA = ("BX0101");
+    // console.log(keyNTA);
 
-    d3.csv("Sandy_NTA_16Apr25_BronxReorder.csv").then(function (data) {
-        console.log(data);
-        const NTARow = data.find(d => d.NTANum === keyNTA);
-        console.log(NTARow);
-        console.log("NTANum is " + NTARow.NTANum);
+    // d3.csv("Sandy_NTA_16Apr25_BronxReorder.csv").then(function (data) {
+    //     console.log(data);
+    //     const NTARow = data.find(d => d.NTANum === keyNTA);
+    //     console.log(NTARow);
+    //     console.log("NTANum is " + NTARow.NTANum);
 
-        singKey.selectAll("*").remove();
+    //     singKey.selectAll("*").remove();
 
-        singKey.append("div")
-            .attr("class", "soloCard")
-            .attr("id", NTARow.NTANum + "keyCard")
-            .style("width", soloCardW + "px")
-            .style("height", soloCardH + "px")
-            .style("top", "0px");
+    //     singKey.append("div")
+    //         .attr("class", "soloCard")
+    //         .attr("id", NTARow.NTANum + "keyCard")
+    //         .style("width", soloCardW + "px")
+    //         .style("height", soloCardH + "px")
+    //         .style("top", "0px");
 
-        var largeEach = d3.select("#" + NTARow.NTANum + "keyCard")
+    //     var largeEach = d3.select("#" + NTARow.NTANum + "keyCard")
 
-        largeEach.append("div")
-            .style("width", soloCardW + "px")
-            .style("height", soloCardH + "px")
-            .style("padding", (soloCardH * .025) + "px")
-            .attr("id", NTARow.NTANum + "soloKeyInner")
-            .attr("class", "soloInnerCard");
+    //     largeEach.append("div")
+    //         .style("width", soloCardW + "px")
+    //         .style("height", soloCardH + "px")
+    //         .style("padding", (soloCardH * .025) + "px")
+    //         .attr("id", NTARow.NTANum + "soloKeyInner")
+    //         .attr("class", "soloInnerCard");
 
-        var largeInner = d3.select("#" + NTARow.NTANum + "soloKeyInner")
+    //     var largeInner = d3.select("#" + NTARow.NTANum + "soloKeyInner")
 
-        largeInner.append("div")
-            .attr("class", "soloSky")
-            .attr("id", NTARow.NTANum + "soloKeySky")
-            .style("width", soloCardW - (soloCardH * .05) + "px")
-            .style("height", (function (data) {
-                var skyP = .01 * parseInt(NTARow.PctSky)
-                var skyH = (soloCardH - (soloCardH * .05)) * skyP;
-                skyHPx = skyH + "px"
-                return skyHPx
-            })
-            );
+    //     largeInner.append("div")
+    //         .attr("class", "soloSky")
+    //         .attr("id", NTARow.NTANum + "soloKeySky")
+    //         .style("width", soloCardW - (soloCardH * .05) + "px")
+    //         .style("height", (function (data) {
+    //             var skyP = .01 * parseInt(NTARow.PctSky)
+    //             var skyH = (soloCardH - (soloCardH * .05)) * skyP;
+    //             skyHPx = skyH + "px"
+    //             return skyHPx
+    //         })
+    //         );
 
-        var largeSky = d3.select("#" + NTARow.NTANum + "soloKeySky")
+    //     var largeSky = d3.select("#" + NTARow.NTANum + "soloKeySky")
 
-        largeSky.append("div")
-            .attr("class", "soloHoldSky")
-            .attr("id", NTARow.NTANum + "soloHoldKeySky");
+    //     largeSky.append("div")
+    //         .attr("class", "soloHoldSky")
+    //         .attr("id", NTARow.NTANum + "soloHoldKeySky");
 
-        var largeHoldSky = d3.select("#" + NTARow.NTANum + "soloHoldKeySky");
+    //     var largeHoldSky = d3.select("#" + NTARow.NTANum + "soloHoldKeySky");
 
-        largeHoldSky.each(function (data) {
-            let populated = NTARow.Population2020.replace(/,/g, "");
-            var numberOfDivs = (Math.ceil(populated / 2500))
+    //     largeHoldSky.each(function (data) {
+    //         let populated = NTARow.Population2020.replace(/,/g, "");
+    //         var numberOfDivs = (Math.ceil(populated / 2500))
 
-            for (let i = 0; i < numberOfDivs; i++) {
-                largeHoldSky.append("div")
-                    .attr("class", "soloPopCol")
-                    .each(function (d) {
-                        var eachPopCol = d3.select(this)
+    //         for (let i = 0; i < numberOfDivs; i++) {
+    //             largeHoldSky.append("div")
+    //                 .attr("class", "soloPopCol")
+    //                 .each(function (d) {
+    //                     var eachPopCol = d3.select(this)
 
-                        eachPopCol.append("img")
-                            .attr("class", "soloSkyFig")
-                            .attr("src", (function (d) {
-                                const myArray = ["SandyFigure1.png", "SandyFigure2.png", "SandyFigure3.png", "SandyFigure4.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure7.png", "SandyFigure8.png", "SandyFigure9.png", "SandyFigure10.png", "SandyFigure11.png", "SandyFigure12.png", "SandyFigure13.png", "SandyFigure14.png", "SandyFigure15.png"];
-                                const myArrayAlt = ["SandyFigure2.png", "SandyFigure3.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure9.png"];
+    //                     eachPopCol.append("img")
+    //                         .attr("class", "soloSkyFig")
+    //                         .attr("src", (function (d) {
+    //                             const myArray = ["SandyFigure1.png", "SandyFigure2.png", "SandyFigure3.png", "SandyFigure4.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure7.png", "SandyFigure8.png", "SandyFigure9.png", "SandyFigure10.png", "SandyFigure11.png", "SandyFigure12.png", "SandyFigure13.png", "SandyFigure14.png", "SandyFigure15.png"];
+    //                             const myArrayAlt = ["SandyFigure2.png", "SandyFigure3.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure9.png"];
 
-                                if (numberOfDivs == 1) {
+    //                             if (numberOfDivs == 1) {
 
-                                    for (let i = 0; i < numberOfDivs; i++) {
-                                        const randomIndex = Math.floor(Math.random() * myArrayAlt.length);
-                                        const randomElement = myArrayAlt[randomIndex];
-                                        const elementPath = ("SandyFigures/" + randomElement)
-                                        return elementPath
-                                    }
-                                } else {
-                                    for (let i = 0; i < numberOfDivs; i++) {
-                                        const randomIndex = Math.floor(Math.random() * myArray.length);
-                                        const randomElement = myArray[randomIndex];
-                                        const elementPath = ("SandyFigures/" + randomElement)
-                                        return elementPath
-                                    }
-                                }
-                            }))
-                            ;
-                    });
-            }
-        })
+    //                                 for (let i = 0; i < numberOfDivs; i++) {
+    //                                     const randomIndex = Math.floor(Math.random() * myArrayAlt.length);
+    //                                     const randomElement = myArrayAlt[randomIndex];
+    //                                     const elementPath = ("SandyFigures/" + randomElement)
+    //                                     return elementPath
+    //                                 }
+    //                             } else {
+    //                                 for (let i = 0; i < numberOfDivs; i++) {
+    //                                     const randomIndex = Math.floor(Math.random() * myArray.length);
+    //                                     const randomElement = myArray[randomIndex];
+    //                                     const elementPath = ("SandyFigures/" + randomElement)
+    //                                     return elementPath
+    //                                 }
+    //                             }
+    //                         }))
+    //                         ;
+    //                 });
+    //         }
+    //     })
 
-        var largeInner = d3.select("#" + NTARow.NTANum + "soloKeyInner")
+    //     var largeInner = d3.select("#" + NTARow.NTANum + "soloKeyInner")
 
-        largeInner.append("div")
-            .attr("class", "soloWater")
-            .attr("id", NTARow.NTANum + "soloKeyWater")
-            .style("position", "absolute")
-            // .style("top", (NTARow.PctSky) + 2 + "%")
-            .style("width", soloCardW - (soloCardH * .05) + "px")
-            .style("height", (function (data) {
-                var watP = .01 * parseInt(NTARow.PctWater)
-                var watH = (soloCardH - (soloCardH * .05)) * watP;
-                watHPx = watH + "px"
-                console.log("water height is " + watHPx)
-                return watHPx
-            })
-            )
-            .each(function (data) {
-                var eachWat = d3.select(this)
-                if (NTARow.PctWater >= 2) {
+    //     largeInner.append("div")
+    //         .attr("class", "soloWater")
+    //         .attr("id", NTARow.NTANum + "soloKeyWater")
+    //         .style("position", "absolute")
+    //         // .style("top", (NTARow.PctSky) + 2 + "%")
+    //         .style("width", soloCardW - (soloCardH * .05) + "px")
+    //         .style("height", (function (data) {
+    //             var watP = .01 * parseInt(NTARow.PctWater)
+    //             var watH = (soloCardH - (soloCardH * .05)) * watP;
+    //             watHPx = watH + "px"
+    //             console.log("water height is " + watHPx)
+    //             return watHPx
+    //         })
+    //         )
+    //         .each(function (data) {
+    //             var eachWat = d3.select(this)
+    //             if (NTARow.PctWater >= 2) {
 
-                    eachWat.each(function (data) {
-                        const el = document.querySelector("#" + NTARow.NTANum + "soloKeyWater");
-                        var originalElement = document.getElementById(NTARow.NTANum + "soloKeySky");
-                        var clonedElement = originalElement.cloneNode(true);
-                        clonedElement.classList.add("refWater");
-                        clonedElement.classList.remove("soloSky");
-                        clonedElement.classList.remove("soloHoldSky");
-                        clonedElement.style.height = "100%";
-                        clonedElement.id = NTARow.NTANum + "largeKeyWat";
-                        el.appendChild(clonedElement);
-                    })
-                }
-            });
+    //                 eachWat.each(function (data) {
+    //                     const el = document.querySelector("#" + NTARow.NTANum + "soloKeyWater");
+    //                     var originalElement = document.getElementById(NTARow.NTANum + "soloKeySky");
+    //                     var clonedElement = originalElement.cloneNode(true);
+    //                     clonedElement.classList.add("refWater");
+    //                     clonedElement.classList.remove("soloSky");
+    //                     clonedElement.classList.remove("soloHoldSky");
+    //                     clonedElement.style.height = "100%";
+    //                     clonedElement.id = NTARow.NTANum + "largeKeyWat";
+    //                     el.appendChild(clonedElement);
+    //                 })
+    //             }
+    //         });
 
-        largeEach.append("div")
-            .attr("x", 10)
-            .attr("y", 15)
-            .attr("class", (function (data) {
-                var watP = .01 * parseInt(NTARow.PctWater)
-                var watH = (soloCardH - (soloCardH * .05)) * watP;
-                console.log(watH)
-                if (watH <= (soloCardH * .5)) {
-                    return "soloTitleCard"
-                }
-                else {
-                    return "soloTitleCardWht"
-                }
-                console.log((NTARow.NTAName) + " " + (watH))
-            }))
+    //     largeEach.append("div")
+    //         .attr("x", 10)
+    //         .attr("y", 15)
+    //         .attr("class", (function (data) {
+    //             var watP = .01 * parseInt(NTARow.PctWater)
+    //             var watH = (soloCardH - (soloCardH * .05)) * watP;
+    //             console.log(watH)
+    //             if (watH <= (soloCardH * .5)) {
+    //                 return "soloTitleCard"
+    //             }
+    //             else {
+    //                 return "soloTitleCardWht"
+    //             }
+    //             console.log((NTARow.NTAName) + " " + (watH))
+    //         }))
 
-            .html("<p>" + (NTARow.Borough) + ": " + (NTARow.NTANum) + "</p><h1>" + (NTARow.NTAName) + "</h1><p>Population: " + (NTARow.Population2020) + "</p>");
-        ;
+    //         .html("<p>" + (NTARow.Borough) + ": " + (NTARow.NTANum) + "</p><h1>" + (NTARow.NTAName) + "</h1><p>Population: " + (NTARow.Population2020) + "</p>");
+    //     ;
 
-    })
+    // })
 
 
 
