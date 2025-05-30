@@ -585,8 +585,11 @@
 
 
 
-    const width = 600;
-    const height = 600;
+    // const width = 600;
+    // const height = 600;
+
+   var width = 600;
+    var height = 600;
 
     const bmWidth = 300;
     const bmHeight = 400;
@@ -651,152 +654,233 @@
     const h = svg.append('g');
     const j = svg.append('g');
 
+
+
+
+function responsiveConst(divId) {
+  const div = d3.select(`#${divId}`);
+
+  // Initial width
+  let currentWidth = div.node().offsetWidth;
+
+  // Function to update width
+  function updateWidth() {
+    currentWidth = div.node().offsetWidth;
+    // Use currentWidth for calculations or updates
+    console.log("Current width:", currentWidth);
+  }
+
+  // Initial update
+  updateWidth();
+
+  // Event listener for window resize
+  window.addEventListener("resize", updateWidth);
+
+  // Return an object with the current width and a function to update it
+  return {
+    getCurrentWidth: () => currentWidth,
+    updateWidth: updateWidth
+  };
+}
+
+// Example usage
+const myConst = responsiveConst("keyCard");
+
+// Access the current width
+console.log("Initial width:", myConst.getCurrentWidth());
+
+// Update the width manually (if needed)
+myConst.updateWidth();
+
+const keyW = myConst.getCurrentWidth();
+console.log("keyW is: ", keyW);
+const keyH = keyW * .666666;
+console.log("keyH is: ", keyH);
+
+
+
+
+    
+
     // DRAW THE KEY
 
-    // const singKey = d3.select("#keyCard");
+    const singKey = d3.select("#keyCard");
 
-    // var keyNTA = ("BX0101");
-    // console.log(keyNTA);
+    var keyNTA = ("BX0101");
+    console.log(keyNTA);
 
-    // d3.csv("Sandy_NTA_16Apr25_BronxReorder.csv").then(function (data) {
-    //     console.log(data);
-    //     const NTARow = data.find(d => d.NTANum === keyNTA);
-    //     console.log(NTARow);
-    //     console.log("NTANum is " + NTARow.NTANum);
+    d3.csv("Sandy_NTA_16Apr25_BronxReorder.csv").then(function (data) {
 
-    //     singKey.selectAll("*").remove();
 
-    //     singKey.append("div")
-    //         .attr("class", "soloCard")
-    //         .attr("id", NTARow.NTANum + "keyCard")
-    //         .style("width", soloCardW + "px")
-    //         .style("height", soloCardH + "px")
-    //         .style("top", "0px");
+       // TESTING THAT WE CAN CHANGE THE SOLOCARD SIZE
 
-    //     var largeEach = d3.select("#" + NTARow.NTANum + "keyCard")
+// const keyDiv = d3.select("#keyCard");
 
-    //     largeEach.append("div")
-    //         .style("width", soloCardW + "px")
-    //         .style("height", soloCardH + "px")
-    //         .style("padding", (soloCardH * .025) + "px")
-    //         .attr("id", NTARow.NTANum + "soloKeyInner")
-    //         .attr("class", "soloInnerCard");
+// // Function to get the width of the div and update the width constant
+// function updateWidth() {
+//   keyWidth = keyDiv.node().getBoundingClientRect().width;
+//   // You can use the width variable here, for example:
+//   console.log("Current width:", keyWidth);
+// }
 
-    //     var largeInner = d3.select("#" + NTARow.NTANum + "soloKeyInner")
 
-    //     largeInner.append("div")
-    //         .attr("class", "soloSky")
-    //         .attr("id", NTARow.NTANum + "soloKeySky")
-    //         .style("width", soloCardW - (soloCardH * .05) + "px")
-    //         .style("height", (function (data) {
-    //             var skyP = .01 * parseInt(NTARow.PctSky)
-    //             var skyH = (soloCardH - (soloCardH * .05)) * skyP;
-    //             skyHPx = skyH + "px"
-    //             return skyHPx
-    //         })
-    //         );
 
-    //     var largeSky = d3.select("#" + NTARow.NTANum + "soloKeySky")
+// console.log("keyH is: ", keyH);
+// // Initial width calculation
+// // let keyH = updateHeight();
+// // let keyWidth = updateWidth();
+// // console.log("keyW is: ", keyWidth);
 
-    //     largeSky.append("div")
-    //         .attr("class", "soloHoldSky")
-    //         .attr("id", NTARow.NTANum + "soloHoldKeySky");
+// // let keyHeight = updateHeight();
 
-    //     var largeHoldSky = d3.select("#" + NTARow.NTANum + "soloHoldKeySky");
 
-    //     largeHoldSky.each(function (data) {
-    //         let populated = NTARow.Population2020.replace(/,/g, "");
-    //         var numberOfDivs = (Math.ceil(populated / 2500))
 
-    //         for (let i = 0; i < numberOfDivs; i++) {
-    //             largeHoldSky.append("div")
-    //                 .attr("class", "soloPopCol")
-    //                 .each(function (d) {
-    //                     var eachPopCol = d3.select(this)
+// // Update width on window resize
+// d3.select(window).on("resize", updateWidth);
+// // d3.select(window).on("resize", updateHeight);
 
-    //                     eachPopCol.append("img")
-    //                         .attr("class", "soloSkyFig")
-    //                         .attr("src", (function (d) {
-    //                             const myArray = ["SandyFigure1.png", "SandyFigure2.png", "SandyFigure3.png", "SandyFigure4.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure7.png", "SandyFigure8.png", "SandyFigure9.png", "SandyFigure10.png", "SandyFigure11.png", "SandyFigure12.png", "SandyFigure13.png", "SandyFigure14.png", "SandyFigure15.png"];
-    //                             const myArrayAlt = ["SandyFigure2.png", "SandyFigure3.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure9.png"];
 
-    //                             if (numberOfDivs == 1) {
 
-    //                                 for (let i = 0; i < numberOfDivs; i++) {
-    //                                     const randomIndex = Math.floor(Math.random() * myArrayAlt.length);
-    //                                     const randomElement = myArrayAlt[randomIndex];
-    //                                     const elementPath = ("SandyFigures/" + randomElement)
-    //                                     return elementPath
-    //                                 }
-    //                             } else {
-    //                                 for (let i = 0; i < numberOfDivs; i++) {
-    //                                     const randomIndex = Math.floor(Math.random() * myArray.length);
-    //                                     const randomElement = myArray[randomIndex];
-    //                                     const elementPath = ("SandyFigures/" + randomElement)
-    //                                     return elementPath
-    //                                 }
-    //                             }
-    //                         }))
-    //                         ;
-    //                 });
-    //         }
-    //     })
+        // console.log(data);
+        const NTARow = data.find(d => d.NTANum === keyNTA);
+        // console.log(NTARow);
+        console.log("NTANum is " + NTARow.NTANum);
 
-    //     var largeInner = d3.select("#" + NTARow.NTANum + "soloKeyInner")
+        singKey.selectAll("*").remove();
 
-    //     largeInner.append("div")
-    //         .attr("class", "soloWater")
-    //         .attr("id", NTARow.NTANum + "soloKeyWater")
-    //         .style("position", "absolute")
-    //         // .style("top", (NTARow.PctSky) + 2 + "%")
-    //         .style("width", soloCardW - (soloCardH * .05) + "px")
-    //         .style("height", (function (data) {
-    //             var watP = .01 * parseInt(NTARow.PctWater)
-    //             var watH = (soloCardH - (soloCardH * .05)) * watP;
-    //             watHPx = watH + "px"
-    //             console.log("water height is " + watHPx)
-    //             return watHPx
-    //         })
-    //         )
-    //         .each(function (data) {
-    //             var eachWat = d3.select(this)
-    //             if (NTARow.PctWater >= 2) {
+        singKey.append("div")
+            .attr("class", "soloCard")
+            .attr("id", NTARow.NTANum + "keyCard")
+            .style("width", keyW + "px")
+            .style("height", keyH + "px")
+            .style("top", "0px");
 
-    //                 eachWat.each(function (data) {
-    //                     const el = document.querySelector("#" + NTARow.NTANum + "soloKeyWater");
-    //                     var originalElement = document.getElementById(NTARow.NTANum + "soloKeySky");
-    //                     var clonedElement = originalElement.cloneNode(true);
-    //                     clonedElement.classList.add("refWater");
-    //                     clonedElement.classList.remove("soloSky");
-    //                     clonedElement.classList.remove("soloHoldSky");
-    //                     clonedElement.style.height = "100%";
-    //                     clonedElement.id = NTARow.NTANum + "largeKeyWat";
-    //                     el.appendChild(clonedElement);
-    //                 })
-    //             }
-    //         });
+        var largeEach = d3.select("#" + NTARow.NTANum + "keyCard")
 
-    //     largeEach.append("div")
-    //         .attr("x", 10)
-    //         .attr("y", 15)
-    //         .attr("class", (function (data) {
-    //             var watP = .01 * parseInt(NTARow.PctWater)
-    //             var watH = (soloCardH - (soloCardH * .05)) * watP;
-    //             console.log(watH)
-    //             if (watH <= (soloCardH * .5)) {
-    //                 return "soloTitleCard"
-    //             }
-    //             else {
-    //                 return "soloTitleCardWht"
-    //             }
-    //             console.log((NTARow.NTAName) + " " + (watH))
-    //         }))
+        largeEach.append("div")
+            .style("width", keyW + "px")
+            .style("height", keyH + "px")
+            .style("padding", (keyH * .025) + "px")
+            .attr("id", NTARow.NTANum + "soloKeyInner")
+            .attr("class", "soloInnerCard");
 
-    //         .html("<p>" + (NTARow.Borough) + ": " + (NTARow.NTANum) + "</p><h1>" + (NTARow.NTAName) + "</h1><p>Population: " + (NTARow.Population2020) + "</p>");
-    //     ;
+        var largeInner = d3.select("#" + NTARow.NTANum + "soloKeyInner")
 
-    // })
+        largeInner.append("div")
+            .attr("class", "soloSky")
+            .attr("id", NTARow.NTANum + "soloKeySky")
+            .style("width", keyW - (keyH * .05) + "px")
+            .style("height", (function (data) {
+                var skyP = .01 * parseInt(NTARow.PctSky)
+                var skyH = (keyH - (keyH * .05)) * skyP;
+                skyHPx = skyH + "px"
+                return skyHPx
+            })
+            );
 
+        var largeSky = d3.select("#" + NTARow.NTANum + "soloKeySky")
+
+        largeSky.append("div")
+            .attr("class", "soloHoldSky")
+            .attr("id", NTARow.NTANum + "soloHoldKeySky");
+
+        var largeHoldSky = d3.select("#" + NTARow.NTANum + "soloHoldKeySky");
+
+        largeHoldSky.each(function (data) {
+            let populated = NTARow.Population2020.replace(/,/g, "");
+            var numberOfDivs = (Math.ceil(populated / 2500))
+
+            for (let i = 0; i < numberOfDivs; i++) {
+                largeHoldSky.append("div")
+                    .attr("class", "soloPopCol")
+                    .each(function (d) {
+                        var eachPopCol = d3.select(this)
+
+                        eachPopCol.append("img")
+                            .attr("class", "soloSkyFig")
+                            .attr("src", (function (d) {
+                                const myArray = ["SandyFigure1.png", "SandyFigure2.png", "SandyFigure3.png", "SandyFigure4.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure7.png", "SandyFigure8.png", "SandyFigure9.png", "SandyFigure10.png", "SandyFigure11.png", "SandyFigure12.png", "SandyFigure13.png", "SandyFigure14.png", "SandyFigure15.png"];
+                                const myArrayAlt = ["SandyFigure2.png", "SandyFigure3.png", "SandyFigure5.png", "SandyFigure6.png", "SandyFigure9.png"];
+
+                                if (numberOfDivs == 1) {
+
+                                    for (let i = 0; i < numberOfDivs; i++) {
+                                        const randomIndex = Math.floor(Math.random() * myArrayAlt.length);
+                                        const randomElement = myArrayAlt[randomIndex];
+                                        const elementPath = ("SandyFigures/" + randomElement)
+                                        return elementPath
+                                    }
+                                } else {
+                                    for (let i = 0; i < numberOfDivs; i++) {
+                                        const randomIndex = Math.floor(Math.random() * myArray.length);
+                                        const randomElement = myArray[randomIndex];
+                                        const elementPath = ("SandyFigures/" + randomElement)
+                                        return elementPath
+                                    }
+                                }
+                            }))
+                            ;
+                    });
+            }
+        })
+
+        var largeInner = d3.select("#" + NTARow.NTANum + "soloKeyInner")
+
+        largeInner.append("div")
+            .attr("class", "soloWater")
+            .attr("id", NTARow.NTANum + "soloKeyWater")
+            .style("position", "absolute")
+            // .style("top", (NTARow.PctSky) + 2 + "%")
+            .style("width", keyW - (keyH * .05) + "px")
+            .style("height", (function (data) {
+                var watP = .01 * parseInt(NTARow.PctWater)
+                var watH = (keyH - (keyH * .05)) * watP;
+                watHPx = watH + "px"
+                console.log("water height is " + watHPx)
+                return watHPx
+            })
+            )
+            .each(function (data) {
+                var eachWat = d3.select(this)
+                if (NTARow.PctWater >= 2) {
+
+                    eachWat.each(function (data) {
+                        const el = document.querySelector("#" + NTARow.NTANum + "soloKeyWater");
+                        var originalElement = document.getElementById(NTARow.NTANum + "soloKeySky");
+                        var clonedElement = originalElement.cloneNode(true);
+                        clonedElement.classList.add("refWater");
+                        clonedElement.classList.remove("soloSky");
+                        clonedElement.classList.remove("soloHoldSky");
+                        clonedElement.style.height = "100%";
+                        clonedElement.id = NTARow.NTANum + "largeKeyWat";
+                        el.appendChild(clonedElement);
+                    })
+                }
+            });
+
+        largeEach.append("div")
+            .attr("x", 10)
+            .attr("y", 15)
+            .attr("class", (function (data) {
+                var watP = .01 * parseInt(NTARow.PctWater)
+                var watH = (keyH - (keyH * .05)) * watP;
+                console.log(watH)
+                if (watH <= (keyH * .5)) {
+                    return "soloTitleCard"
+                }
+                else {
+                    return "soloTitleCardWht"
+                }
+                console.log((NTARow.NTAName) + " " + (watH))
+            }))
+
+            .html("<p>" + (NTARow.Borough) + ": " + (NTARow.NTANum) + "</p><h1>" + (NTARow.NTAName) + "</h1><p>Population: " + (NTARow.Population2020) + "</p>");
+        ;
+
+    })
+
+ 
+ 
 
 
     // d3.json("Sandy_from_QGIS_06May_CRS84.geojson")
