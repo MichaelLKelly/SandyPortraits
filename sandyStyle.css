@@ -14,7 +14,7 @@ body {
     height: 100%;
     width: 100%;
     /* margin-bottom: 30px; */
-    background-color: rgb(255, 255, 242);
+    background-color: rgb(255, 255, 250);
 }
 
 /* ------------TITLE-------------------------- */
@@ -28,12 +28,6 @@ body {
     object-fit: cover;
     vertical-align: middle;
 }
-
-/* #waterBG img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
 
 #sandyTitle {
     margin: auto;
@@ -63,12 +57,16 @@ body {
     opacity: 0.7;
 }
 
+#sTitleTwo h2, #sTitleOne h2{
+    margin: 0;
+}
+
 .sandyIcon {
     height: 2.5rem;
 }
 
 .sandyTRule {
-    border-top: 3px dotted rgb(255, 255, 242);
+    border-top: 3px dotted rgb(255, 255, 248);
     border-bottom: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -90,7 +88,7 @@ body {
     color: rgb(110 33 0);
     margin: auto;
     /* pt was 20px */
-    padding-top: 1.25rem;
+    padding: 1.25rem 0;
     font-size: 1.35rem;
     line-height: 1.9;
     font-family: 'Figtree', 'Arial Narrow', Arial, sans-serif;
@@ -218,7 +216,7 @@ max-width: 650px;
 
 
 #NTATip {
-    background-color: rgba(255,255,255,0.9) !important;
+    background-color: rgba(255,255,248,0.9) !important;
    width: 90px; padding-right: 10px !important;
    /* max-width: 100px; */
     font-family: 'Figtree', 'Arial Narrow', Arial, sans-serif;
@@ -533,7 +531,7 @@ height: 30px
 
 .singCard {
     /* background-color: none; */
-    background-color: rgb(239, 239, 223);
+    background-color: rgb(239, 239, 228);
     /* height: 400px; */
 width: 100%;
 aspect-ratio: 1/.66;
@@ -798,8 +796,8 @@ aspect-ratio: 1/.66;
     pointer-events: none;
 }
 
-.titleCard h1,
-.titleCardWht h1 {
+.titleCard h4,
+.titleCardWht h4 {
     /* font-size: 24px; */
     /* font-size: 33px; */
     font-size: .88rem;
@@ -821,7 +819,7 @@ aspect-ratio: 1/.66;
     margin: 0px;
 }
 
-.justNum h1 {
+.justNum h4 {
     /* font-size: 36px; */
     font-size: 14px;
     font-weight: 700;
@@ -855,8 +853,8 @@ aspect-ratio: 1/.66;
     pointer-events: none;
 }
 
-.soloTitleCard h1,
-.soloTitleCardWht h1 {
+.soloTitleCard h4,
+.soloTitleCardWht h4 {
     /* font-size: 24px; */
     font-size: 2rem;
     /* font-size: 14px; */
@@ -915,9 +913,9 @@ aspect-ratio: 1/.66;
 @media (max-width: 750px) {
 
 #waterBG {
-    /* background-image: url("100yr_port_water_IMG_2571_crop1.png");
-    background-size: 200%; */
-    height: 50vh;
+    background-image: url("100yr_port_water_IMG_2571_crop1.png");
+    background-size: 300%;
+    /* height: 50vh; */
     /* width: 100vw;
     overflow: hidden;
     object-fit: cover;
@@ -987,12 +985,44 @@ aspect-ratio: 1/.66;
     /* border-bottom: 1px dotted #58585b; */ */
 }
 
+
+.notes {
+    margin: auto;
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 650px;
+    /* border-top: 1px dotted #58585b; */
+    border-bottom: 1px dotted #58585b;
+    font-family: "Figtree", Arial, sans-serif;
+    font-size: .85rem;
+}
+
+.notes p {
+    margin-block-start: 0px;
+        margin-block-end: .5rem;
+}
+
+
 #bronxNotes, #bklynNotes, #manhNotes, #queensNotes, #statenNotes {
         /* margin-left: 0; */
     grid-column: 1 / span 1;
-    /* border-bottom: none;
-    padding: 0; */
+    /* border-bottom: none; */
+    padding: 1rem 0 0 0;
 }
+
+.soloTitleCard h4,
+.soloTitleCardWht h4 {
+    font-size: 1.5rem;
+    /* font-family: 'Figtree', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0px; */
+}
+
+
+
 
 
 }
