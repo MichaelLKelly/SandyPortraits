@@ -247,7 +247,7 @@ max-width: 650px;
     /* padding-top: 20px; */
     padding: 1.25rem 0;
     font-size: 1.25rem;
-    line-height: 1.9;
+    line-height: 1.8;
     font-family: 'Georgia', serif;
     text-wrap: pretty;
     width: 90%;
@@ -264,7 +264,7 @@ max-width: 650px;
     font-family: 'Georgia', serif;
     font-weight: 600;
     letter-spacing: 2px;
-    width: 90%;
+    width: 100%;
     /* width: 90%; */
     /* max-width: 1000px; */
     text-align: center;
@@ -915,19 +915,17 @@ aspect-ratio: 1/.66;
 #waterBG {
     background-image: url("100yr_port_water_IMG_2571_crop1.png");
     background-size: 330%;
-    /* height: 50vh; */
+    /* height: 75vh; */
     /* width: 100vw;
     overflow: hidden;
     object-fit: cover;
     vertical-align: middle; */
 }
 
-
-
 #sandyTitle {
     /* margin: auto;
-    position: absolute;
-    top: 50%;
+    position: relative; */
+    /* top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
@@ -1027,7 +1025,18 @@ aspect-ratio: 1/.66;
     margin: 0px; */
 }
 
-
+.runningText {
+    /* color: #444444;
+    margin: auto; */
+    /* padding-top: 20px; */
+    /* padding: 1.25rem 0; */
+    font-size: 1.1rem;
+    line-height: 1.7;
+    /* font-family: 'Georgia', serif;
+    text-wrap: pretty;
+    width: 90%;
+    max-width: 650px; */
+}
 
 
 
